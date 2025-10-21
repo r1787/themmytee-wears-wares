@@ -303,21 +303,349 @@
             margin-top: 30px;
         }
 
-        /*   MOBILE FIX: 2 products per row on portrait */
-        @media (max-width: 768px) {
-            .products-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 15px;
-            }
-        }
+/* ===== ENHANCED RESPONSIVE DESIGN ===== */
 
-        @media (max-width: 480px) {
-            .products-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 12px;
-            }
-        }
+/* Tablet Devices (768px and below) */
+@media (max-width: 768px) {
+    .top-bar .container {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+        font-size: 0.8rem;
+    }
+    
+    .header-main .container {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    
+    .logo {
+        min-width: 200px;
+        margin-right: 0;
+        text-align: center;
+    }
+    
+    .logo img {
+        height: 80px;
+        max-width: 200px;
+    }
+    
+    .search-bar {
+        order: 3;
+        margin: 10px 0 0 0;
+        max-width: 100%;
+        min-width: 100%;
+    }
+    
+    .header-actions {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .main-nav .container {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        padding: 12px 0;
+    }
+    
+    .hero {
+        padding: 80px 20px;
+    }
+    
+    .hero h1 {
+        font-size: 2.2rem;
+        margin-bottom: 15px;
+    }
+    
+    .hero p {
+        font-size: 1.1rem;
+        margin-bottom: 25px;
+    }
+    
+    .share-buttons {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    .share-btn {
+        padding: 10px 16px;
+        font-size: 0.9rem;
+    }
+    
+    .category-filters {
+        gap: 10px;
+    }
+    
+    .category-btn {
+        padding: 12px 18px;
+        font-size: 0.85rem;
+        min-width: 140px;
+        justify-content: center;
+    }
+    
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .product-card {
+        margin-bottom: 10px;
+    }
+    
+    .product-image {
+        height: 180px;
+    }
+    
+    .product-info {
+        padding: 15px;
+    }
+    
+    .product-title {
+        font-size: 1rem;
+        height: 48px;
+    }
+    
+    .add-to-cart {
+        padding: 12px 15px;
+        font-size: 0.9rem;
+    }
+    
+    .about-content {
+        padding: 25px;
+        margin: 0 15px;
+    }
+    
+    .about-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    .policy-points {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+    
+    .footer-section h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
 
+/* Mobile Devices (480px and below) */
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+    }
+    
+    .top-bar {
+        padding: 8px 0;
+        font-size: 0.75rem;
+    }
+    
+    .logo {
+        min-width: 150px;
+    }
+    
+    .logo img {
+        height: 60px;
+        max-width: 150px;
+    }
+    
+    .header-actions {
+        gap: 15px;
+    }
+    
+    .header-actions a {
+        font-size: 0.9rem;
+    }
+    
+    .search-bar input {
+        padding: 12px 16px;
+        font-size: 0.9rem;
+    }
+    
+    .search-bar button {
+        padding: 0 20px;
+    }
+    
+    .hero {
+        padding: 60px 15px;
+    }
+    
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    .section-title {
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+    }
+    
+    .categories {
+        padding: 20px 15px;
+        margin: 20px 0;
+    }
+    
+    .category-filters {
+        gap: 8px;
+    }
+    
+    .category-btn {
+        padding: 10px 14px;
+        font-size: 0.8rem;
+        min-width: 120px;
+    }
+    
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    .product-image {
+        height: 200px;
+    }
+    
+    .product-badge {
+        font-size: 0.7rem;
+        padding: 4px 10px;
+    }
+    
+    .quick-view-btn {
+        padding: 6px 10px;
+        font-size: 0.7rem;
+        opacity: 1; /* Always visible on mobile */
+    }
+    
+    .cart-content,
+    .quick-view-content,
+    .size-guide-content {
+        width: 95%;
+        padding: 20px;
+        margin: 10px;
+    }
+    
+    .quick-view-content > div {
+        grid-template-columns: 1fr !important;
+        gap: 20px;
+    }
+    
+    .floating-whatsapp {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+        bottom: 15px;
+        right: 15px;
+    }
+}
+
+/* Small Mobile Devices (360px and below) */
+@media (max-width: 360px) {
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+    
+    .category-btn {
+        min-width: 100px;
+        padding: 8px 12px;
+        font-size: 0.75rem;
+    }
+    
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .product-price {
+        font-size: 1.2rem;
+    }
+    
+    .header-actions {
+        gap: 10px;
+    }
+    
+    .header-actions a {
+        font-size: 0.8rem;
+    }
+}
+
+/* Large Desktop Screens (1200px and above) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1300px;
+    }
+    
+    .products-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+}
+
+/* Landscape Mobile Optimization */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero {
+        padding: 40px 0;
+    }
+    
+    .hero h1 {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
+}
+
+/* High-DPI Screens */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .logo img {
+        image-rendering: -webkit-optimize-contrast;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .floating-whatsapp,
+    .header-actions,
+    .search-bar,
+    .main-nav {
+        display: none !important;
+    }
+}
+
+/* ===== TOUCH DEVICE OPTIMIZATIONS ===== */
+@media (hover: none) and (pointer: coarse) {
+    .product-card:hover {
+        transform: none;
+    }
+    
+    .quick-view-btn {
+        opacity: 1; /* Always visible on touch devices */
+    }
+    
+    .category-btn:hover,
+    .add-to-cart:hover {
+        transform: none;
+    }
+}
+
+/* ===== IMPROVED ACCESSIBILITY ===== */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
         .product-card {
             background: var(--secondary);
             border-radius: 15px;
@@ -460,10 +788,16 @@
 
         /* About Us Section */
         .about-section {
-            background: linear-gradient(rgba(139, 69, 19, 0.8), rgba(160, 82, 45, 0.8)), 
-                        url('https://i.ibb.co/m5gjsP97/clark-street-mercantile-P3p-I6xzovu0-unsplash.jpg');
-            background-size: cover;
-            background-position: center;
+.about-section {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+    /* Remove the background-image entirely */
+    background-size: auto;
+    background-position: auto;
+    /* ... rest of your code ... */
+}    background-attachment: scroll; /* Change from fixed to scroll */
+    background-repeat: no-repeat;
+    /* ... rest of your code ... */
+}
             padding: 80px 0;
             margin: 60px 0;
             color: var(--secondary);
@@ -480,12 +814,12 @@
             border: 2px solid var(--secondary);
         }
 
-        .about-content h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            color: var(--secondary);
-        }
-
+.about-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--primary); /* Change to brown */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3); /* Optional: adds readability */
+}
         .about-content p {
             font-size: 1.1rem;
             line-height: 1.8;
