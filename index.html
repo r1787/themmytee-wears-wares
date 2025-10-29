@@ -718,7 +718,7 @@
             height: 50px;
             overflow: hidden;
             display: -webkit-box;
-            -webkit-line-clamp: 2;
+            -webkit-line-clampz: 2;
             -webkit-box-orient: vertical;
         }
 
@@ -796,14 +796,14 @@
     /* ... rest of your code ... */
 }    background-attachment: scroll; /* Change from fixed to scroll */
     background-repeat: no-repeat;
-    /* ... rest of your code ... */
-}
-            padding: 80px 0;
+     padding: 80px 0;
             margin: 60px 0;
             color: var(--secondary);
             text-align: center;
             border-radius: 15px;
-        }
+}
+           
+        
 
         .about-content {
             max-width: 800px;
@@ -1416,7 +1416,10 @@
                 </button>
                 <button class="category-btn" data-category="kids">
                     <i class="fas fa-child"></i>  Kids & Toys
-                </button>
+                </button>               
+                <button class="category-btn" data-category="neatly used items">
+                    <i class="fas fa-tshirt"></i>  Neatly used items
+                </button> 
                 <button class="category-btn" data-category="home">
                     <i class="fas fa-home"></i>  Household Items
                 </button>
@@ -1822,7 +1825,7 @@
                 price: 6000,
                 category: "home",
                 image: "https://i.ibb.co/MkxMmDc0/1714d656d14b43a788347d46c5f30911.jpg",
-                badge: "38-42",
+                badge: "",
                 onDeal: true,
                 
             },
@@ -1852,7 +1855,7 @@
                 price: 3500,
                 category: "home",
                 image: "https://i.ibb.co/ycrH4xX6/Whats-App-Image-2025-10-23-at-19-25-38-34670156.jpg",
-                badge: "37-41",
+                badge: "",
                 onDeal: false,
                 
             },
@@ -1862,7 +1865,7 @@
                 price: 21500,
                 category: "home",
                 image: "https://i.ibb.co/nssTS3CG/Whats-App-Image-2025-10-22-at-13-10-41-898df11e.jpg",
-                badge: "37-42",
+                badge: "",
                 onDeal: true,
                             },
             {
@@ -1872,7 +1875,7 @@
                 oldPrice: 20000,
                 category: "mens",
                 image: "https://i.ibb.co/ZRrzfmrX/Whats-App-Image-2025-10-22-at-13-08-03-10cf96b7.jpg",
-                badge: "37-42",
+                badge: "",
                 onDeal: false,
                             },
             {
@@ -1881,7 +1884,7 @@
                 price: 15000,
                 category: "mens",
                 image: "https://i.ibb.co/7d6NjmMT/Whats-App-Image-2025-10-22-at-13-07-28-b7f13bd6.jpg",
-                badge: "with alexa",
+                badge: "",
                 onDeal: true,
                             },
             {   
@@ -1891,7 +1894,7 @@
                 oldPrice: 20000,
                 category: "mens",
                 image: "https://i.ibb.co/zThyNqZh/Whats-App-Image-2025-10-22-at-13-07-05-4d2a9375.jpg",
-                badge: "41-43",
+                badge: "",
                 onDeal: true,
                 
             },
@@ -1911,7 +1914,7 @@
                 price: 15000,
                 category: "mens",
                 image: "https://i.ibb.co/PGgRVZwT/Whats-App-Image-2025-10-22-at-13-06-10-ae89b6aa.jpg", // ← REPLACE WITH YOUR IMAGE
-                badge: "40-46",
+                badge: "",
                 onDeal: true
             },
             {
@@ -2081,9 +2084,394 @@
                 onDeal: true
             },
             {
-
-                id: 56,
+                 id: 56,
                 name: "",
+                price: "Price on Request",
+                category: "womens",
+                image: "images/product-1.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+            {
+                 id: 57,
+                name: "",
+                price: "Price on Request",
+                category: "kids",
+                image: "images/product-2.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+          
+            },
+            {
+                 id: 58,
+                name: "",
+                price: "10000",
+                category: "neatly used items",
+                image: "images/product-3.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "40/41",
+                onDeal: false
+            },
+            {
+                id: 59,
+                name: "",
+                price: "12000",
+                category: "neatly used items",
+                image: "images/product-4.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "40",
+                onDeal: true
+            },
+            {
+                id: 60,
+                name: "",
+                price: "10500",
+                category: "neatly used items",
+                image: "images/product-5.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "38",
+                onDeal: true
+            },
+            {
+                 id: 61,
+                name: "",
+                price: "10000",
+                category: "neatly used items",
+                image: "images/product-6.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "40",
+                onDeal: true
+            },
+            {
+                 id: 62,
+                name: "",
+                price: "11000",
+                category: "neatly used items",
+                image: "images/product-7.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "38/39",
+                onDeal: true
+          
+            },
+            {
+                 id: 63,
+                name: "",
+                price: "6000",
+                category: "neatly used items",
+                image: "images/product-8.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "36",
+                onDeal: false
+            },
+            {
+                id: 64,
+                name: "",
+                price: "10000",
+                category: "neatly used items",
+                image: "images/product-9.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "40",
+                onDeal: true
+            },
+            {
+                id: 65,
+                name: "",
+                price: "Price on Request",
+                category: "womens",
+                image: "images/product-41.jpg",
+                badge: "",
+                onDeal: true,
+                
+            },
+            {
+                id: 66,
+                name: "",
+                price: "Price on Request",
+                category: "womens", 
+                image: "images/product-40.jpg",
+                badge: "HOT",
+                onDeal: false,
+                
+            },
+            {
+                id: 67,
+                name: "",
+                price: "Price on Request",
+                category: "womens",
+                image: "images/product-39.jpg",
+                badge: "NEW",
+                onDeal: false,
+                
+            },
+            {
+                id: 68,
+                name: "",
+                price: "Price on Request",
+                category: "womens",
+                image: "images/product-38.jpg",
+                badge: "",
+                onDeal: false,
+                
+            },
+            {
+                id: 69,
+                name: "",
+                price: "Price on Request",
+                category: "kids",
+                image: "images/product-37.jpg",
+                badge: "",
+                onDeal: true,
+                            },
+            {
+                id: 70,
+                name: "Crochet hat",
+                price: "Price on Request",
+                category: "womens",
+                image: "images/product-36.jpg",
+                badge: "",
+                onDeal: false,
+                            },
+            {
+                id: 71,
+                name: "Crochet top",
+                price: "Price on Request",
+                category: "womens",
+                image: "images/product-35.jpg",
+                badge: "",
+                onDeal: true,
+                            },
+            {   
+                id: 72,
+                name: "Crochet ear rings",
+                price: "Price on Request",
+                oldPrice: 20000,
+                category: "womens",
+                image: "images/product-34.jpg",
+                badge: "",
+                onDeal: true,
+                
+            },
+            {
+                id: 73,
+                name: "Crochet ear rings",
+                price: "Price on Request",
+                category: "womens",
+                image: "images/product-33.jpg",
+                badge: "SALE",
+                onDeal: true,
+                
+            },
+            {
+                id: 74,
+                name: "Crochet ear rings",
+                price: "Price on Request",
+                category: "womens",
+                image: "images/product-32.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "",
+                onDeal: true
+            },
+            {
+                 id: 75,
+                name: "Crochet ear rings",
+                price: "Price on Request",
+                category: "womens",
+                image: "images/product-31.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+            {
+                 id: 76,
+                name: "Crochet ear rings",
+                price: "Price on Request",
+                category: "womens",
+                image: "images/product-30.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+            {
+                 id: 77,
+                name: "Crochet ear rings",
+                price: "Price on Request",
+                category: "womens",
+                image: "images/product-29.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+            {
+                 id: 78,
+                name: "Crochet ear rings",
+                price: "Price on Request",
+                category: "womens",
+                image: "images/product-28.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+            {
+                 id: 79,
+                name: "Crochet ear rings",
+                price: "Price on Request",
+                category: "womens",
+                image: "images/product-27.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+            {
+                 id: 80,
+                name: "Tote bags",
+                price: "Price on Request",
+                category: "womens",
+                image: "images/product-26.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "",
+                onDeal: true
+            },
+            {
+                 id: 81,
+                name: "crochet ear rings",
+                price: "Price on Request",
+                category: "womens",
+                image: "images/product-25.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+            {
+                 id: 82,
+                name: "Tote bag",
+                price: "Price on Request",
+                category: "womens",	
+                image: "images/product-24.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+            {
+                 id: 83,
+                name: "Crochet ear rings",
+                price: "Price on Request",
+                category: "womens",
+                image: "images/product-23.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+            {
+                 id: 84,
+                name: "Tote bag",
+                price: "Price on Request",
+                category: "womens",
+                image: "images/product-22.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+            {
+                  id: 85,
+                name: "Tote bag",
+                price: 28000,
+                oldPrice: "Price on Request",
+                category: "womens",
+                image: "images/product-21.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+            {
+                 id: 86,
+                name: "Tote bag",
+                price: "Price on Request",
+                category: "womens",
+                image: "images/product-20.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+
+            },
+            {
+                 id: 87,
+                name: "Giant teddy bear",
+                price: 30000,
+                category: "neatly used items",
+                image: "images/product-19.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "",
+                onDeal: true
+
+            },
+            {
+                 id: 88,
+                name: "Big stuffed tortoise",
+                price: "30000",
+                category: "neatly used items",
+                image: "images/product-18.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+            {
+                 id: 89,
+                name: "7-in-1 kids adjustable basketball,football,golf......",
+                price: "400000",
+                category: "kids",
+                image: "images/product-17.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+            {
+                 id: 90,
+                name: "Slide",
+                price: 50000,
+                category: "kids",
+                image: "images/product-16.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+          
+            },
+            {
+                 id: 91,
+                name: "learn and spin aquarium",
+                price: 25000,
+                category: "kids",
+                image: "images/product-15.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+            {
+                id: 92,
+                name: "Female fotwear",
+                price: 10000,
+                category: "neatly used items",
+                image: "images/product-14.jpg",
+                badge: "38/39",
+                onDeal: false,
+                
+            },
+            {
+                id: 93,
+                name: "Female footwear",
+                price: 10500,
+                category: "neatly used items", 
+                image: "images/product-13.jpg",
+                badge: "41/42",
+                onDeal: false,
+                
+            },
+            {
+                id: 94,
+                name: "Female footwear",
+                price: 11000,
+                category: "neatly used items",
+                image: "images/product-12.jpg",
+                badge: "41/42",
+                onDeal: false,
+                
+            },
+            {
+                id: 95,
+                name: "2 in 1 push car",
+                price: 50000,
+                category: "kids",
+                image: "images/product-11.jpg",
+                badge: "",
+                onDeal: false,
+                
+            },
+            {
+                id: 96,
+                name: "Alphabet Apple educational toy",
+                price: 20000,
+                category: "kids",
+                image: "images/product-10.jpg",
+                badge: "",
+                onDeal: true,
+                            },
+            {
+                id: 97,
+                name: "male footwear",
                 price: "43000",
                 category: "mens",
                 image: "https://i.ibb.co/jPxvJjg4/Whats-App-Image-2025-10-21-at-18-40-25-5a41d4ac.jpg", // ← REPLACE WITH YOUR IMAGE
