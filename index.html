@@ -3,30 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Themmytee Wears & Wares - Premium Fashion & Home Store in Nigeria</title>
     
-    <!--   SEO META TAGS -->
+    <!-- SEO META TAGS -->
     <meta name="description" content="Themmytee Wears & Wares - Premium fashion for men, women, unisex plus household equipment in Nigeria. Luxury quality with delivery in Lagos. Shop clothing, toys, electric appliances.">
     <meta name="keywords" content="nigerian fashion, lagos clothing store, household items nigeria, themmytee, kids toys lagos, electric appliances nigeria, men's fashion lagos, women's clothing nigeria, unisex fashion lagos, home equipment lagos">
     <meta name="author" content="Themmytee Wears & Wares">
     <meta name="robots" content="index, follow">
     <meta name="googlebot" content="index, follow">
     
-    <!--   SOCIAL MEDIA META TAGS -->
+    <!-- SOCIAL MEDIA META TAGS -->
     <meta property="og:title" content="Themmytee Wears & Wares - Premium Fashion & Home Store Nigeria">
     <meta property="og:description" content="Premium fashion wears and household equipment in Nigeria. Luxury quality with delivery in Lagos. Shop now!">
-    <meta property="og:image" content="https://i.ibb.co/8LBxSYrc/Whats-App-Image-2025-10-23-at-18-49-19-5e7f693b.jpg ">
+    <meta property="og:image" content="https://i.ibb.co/8LBxSYrc/Whats-App-Image-2025-10-23-at-18-49-19-5e7f693b.jpg">
     <meta property="og:url" content="https://themmytee-wears-and-wares.netlify.app">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Themmytee Wears & Wares">
     
-    <!--   TWITTER META TAGS -->
+    <!-- TWITTER META TAGS -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Themmytee Wears & Wares - Premium Fashion & Home Store">
     <meta name="twitter:description" content="Premium fashion wears and household equipment in Nigeria. Luxury quality with delivery in Lagos.">
-    <meta name="twitter:image" content="https://i.ibb.co/8LBxSYrc/Whats-App-Image-2025-10-23-at-18-49-19-5e7f693b.jpgg">
+    <meta name="twitter:image" content="https://i.ibb.co/8LBxSYrc/Whats-App-Image-2025-10-23-at-18-49-19-5e7f693b.jpg">
     
-    <!--    SCHEMA MARKUP FOR GOOGLE -->
+    <!-- SCHEMA MARKUP FOR GOOGLE -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -42,7 +43,7 @@
             "addressCountry": "Nigeria"
         },
         "openingHours": "Mo-Su 09:00-20:00",
-        "priceRange": "₦",
+        "priceRange": "?",
         "currenciesAccepted": "NGN"
     }
     </script>
@@ -57,14 +58,14 @@
         }
 
         :root {
-            --primary: #8B4513; /* Brown */
-            --secondary: #F5F5DC; /* Cream */
-            --accent: #A0522D; /* Dark Brown */
-            --dark: #3E2723; /* Dark Brown */
-            --light: #FDF5E6; /* Light Cream */
-            --success: #8B4513; /* Brown for success */
-            --gray: #D2B48C; /* Tan */
-            --light-gray: #FAF0E6; /* Linen */
+            --primary: #8B4513;
+            --secondary: #F5F5DC;
+            --accent: #A0522D;
+            --dark: #3E2723;
+            --light: #FDF5E6;
+            --success: #8B4513;
+            --gray: #D2B48C;
+            --light-gray: #FAF0E6;
         }
 
         body {
@@ -105,11 +106,11 @@
 
         .logo {
             margin-right: 40px;
-            min-width: 360px; /* DOUBLED LOGO SPACE (was 180px) */
+            min-width: 360px;
         }
 
         .logo img {
-            height: 120px; /* Larger logo */
+            height: 120px;
             width: auto;
             max-width: 300px;
             object-fit: contain;
@@ -152,24 +153,110 @@
             background: var(--accent);
         }
 
+        /* Enhanced Header Actions */
         .header-actions {
             display: flex;
-            gap: 20px;
+            gap: 15px;
             margin-left: 20px;
         }
 
-        .header-actions a {
-            color: var(--primary);
+        .account-highlight, .cart-highlight {
+            background: var(--primary);
+            color: var(--secondary) !important;
+            padding: 12px 20px !important;
+            border-radius: 25px;
+            font-weight: 700 !important;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            border: 2px solid var(--primary);
+            box-shadow: 0 4px 12px rgba(139, 69, 19, 0.2);
             text-decoration: none;
             display: flex;
             align-items: center;
-            gap: 5px;
-            font-weight: 600;
-            transition: color 0.3s;
+            gap: 8px;
         }
 
-        .header-actions a:hover {
+        .account-highlight:hover, .cart-highlight:hover {
+            background: var(--accent) !important;
+            color: var(--secondary) !important;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(139, 69, 19, 0.3);
+            border-color: var(--accent);
+        }
+
+        .account-highlight i, .cart-highlight i {
+            font-size: 1.1rem;
+        }
+
+        /* User Profile Dropdown */
+        .user-profile {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--primary);
+            color: var(--secondary);
+            padding: 10px 18px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid var(--primary);
+        }
+
+        .user-profile:hover {
+            background: var(--accent);
+            border-color: var(--accent);
+        }
+
+        .user-profile:hover .user-dropdown {
+            display: block;
+        }
+
+        .user-dropdown {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: var(--secondary);
+            border: 2px solid var(--primary);
+            border-radius: 10px;
+            padding: 10px 0;
+            min-width: 180px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            z-index: 1000;
+            display: none;
+        }
+
+        .user-dropdown a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 20px;
+            color: var(--primary);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .user-dropdown a:hover {
+            background: var(--light);
             color: var(--accent);
+        }
+
+        .user-avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: var(--secondary);
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1rem;
+        }
+
+        .user-name {
+            font-weight: 700;
+            font-size: 0.9rem;
         }
 
         /* Navigation */
@@ -224,6 +311,90 @@
             font-size: 1.4rem;
             opacity: 0.95;
             margin-bottom: 30px;
+        }
+
+        /* Account Creation Section */
+        .account-creation-section {
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--light) 100%);
+            padding: 80px 0;
+            margin: 60px 0;
+            border-radius: 20px;
+            border: 3px solid var(--primary);
+        }
+
+        .account-creation-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .account-text h2 {
+            color: var(--primary);
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            line-height: 1.3;
+        }
+
+        .benefits-list {
+            margin-bottom: 30px;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            color: var(--dark);
+        }
+
+        .benefit-item i {
+            color: var(--primary);
+            font-size: 1.3rem;
+            width: 25px;
+        }
+
+        .create-account-btn-large {
+            background: var(--primary);
+            color: var(--secondary);
+            border: none;
+            padding: 18px 35px;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 8px 25px rgba(139, 69, 19, 0.3);
+        }
+
+        .create-account-btn-large:hover {
+            background: var(--accent);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(139, 69, 19, 0.4);
+        }
+
+        .account-visual {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .visual-placeholder {
+            background: var(--primary);
+            color: var(--secondary);
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        .visual-placeholder i {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            display: block;
         }
 
         /* Categories */
@@ -303,349 +474,6 @@
             margin-top: 30px;
         }
 
-/* ===== ENHANCED RESPONSIVE DESIGN ===== */
-
-/* Tablet Devices (768px and below) */
-@media (max-width: 768px) {
-    .top-bar .container {
-        flex-direction: column;
-        gap: 8px;
-        text-align: center;
-        font-size: 0.8rem;
-    }
-    
-    .header-main .container {
-        flex-wrap: wrap;
-        gap: 15px;
-    }
-    
-    .logo {
-        min-width: 200px;
-        margin-right: 0;
-        text-align: center;
-    }
-    
-    .logo img {
-        height: 80px;
-        max-width: 200px;
-    }
-    
-    .search-bar {
-        order: 3;
-        margin: 10px 0 0 0;
-        max-width: 100%;
-        min-width: 100%;
-    }
-    
-    .header-actions {
-        margin-left: auto;
-        margin-right: auto;
-    }
-    
-    .main-nav .container {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-        padding: 12px 0;
-    }
-    
-    .hero {
-        padding: 80px 20px;
-    }
-    
-    .hero h1 {
-        font-size: 2.2rem;
-        margin-bottom: 15px;
-    }
-    
-    .hero p {
-        font-size: 1.1rem;
-        margin-bottom: 25px;
-    }
-    
-    .share-buttons {
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-    
-    .share-btn {
-        padding: 10px 16px;
-        font-size: 0.9rem;
-    }
-    
-    .category-filters {
-        gap: 10px;
-    }
-    
-    .category-btn {
-        padding: 12px 18px;
-        font-size: 0.85rem;
-        min-width: 140px;
-        justify-content: center;
-    }
-    
-    .products-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-    }
-    
-    .product-card {
-        margin-bottom: 10px;
-    }
-    
-    .product-image {
-        height: 180px;
-    }
-    
-    .product-info {
-        padding: 15px;
-    }
-    
-    .product-title {
-        font-size: 1rem;
-        height: 48px;
-    }
-    
-    .add-to-cart {
-        padding: 12px 15px;
-        font-size: 0.9rem;
-    }
-    
-    .about-content {
-        padding: 25px;
-        margin: 0 15px;
-    }
-    
-    .about-content h2 {
-        font-size: 1.8rem;
-    }
-    
-    .policy-points {
-        grid-template-columns: 1fr;
-        gap: 12px;
-    }
-    
-    .footer-content {
-        grid-template-columns: 1fr;
-        gap: 30px;
-        text-align: center;
-    }
-    
-    .footer-section h3::after {
-        left: 50%;
-        transform: translateX(-50%);
-    }
-}
-
-/* Mobile Devices (480px and below) */
-@media (max-width: 480px) {
-    .container {
-        width: 95%;
-    }
-    
-    .top-bar {
-        padding: 8px 0;
-        font-size: 0.75rem;
-    }
-    
-    .logo {
-        min-width: 150px;
-    }
-    
-    .logo img {
-        height: 60px;
-        max-width: 150px;
-    }
-    
-    .header-actions {
-        gap: 15px;
-    }
-    
-    .header-actions a {
-        font-size: 0.9rem;
-    }
-    
-    .search-bar input {
-        padding: 12px 16px;
-        font-size: 0.9rem;
-    }
-    
-    .search-bar button {
-        padding: 0 20px;
-    }
-    
-    .hero {
-        padding: 60px 15px;
-    }
-    
-    .hero h1 {
-        font-size: 1.8rem;
-    }
-    
-    .hero p {
-        font-size: 1rem;
-    }
-    
-    .section-title {
-        font-size: 1.6rem;
-        margin-bottom: 20px;
-    }
-    
-    .categories {
-        padding: 20px 15px;
-        margin: 20px 0;
-    }
-    
-    .category-filters {
-        gap: 8px;
-    }
-    
-    .category-btn {
-        padding: 10px 14px;
-        font-size: 0.8rem;
-        min-width: 120px;
-    }
-    
-    .products-grid {
-        grid-template-columns: 1fr;
-        gap: 12px;
-    }
-    
-    .product-image {
-        height: 200px;
-    }
-    
-    .product-badge {
-        font-size: 0.7rem;
-        padding: 4px 10px;
-    }
-    
-    .quick-view-btn {
-        padding: 6px 10px;
-        font-size: 0.7rem;
-        opacity: 1; /* Always visible on mobile */
-    }
-    
-    .cart-content,
-    .quick-view-content,
-    .size-guide-content {
-        width: 95%;
-        padding: 20px;
-        margin: 10px;
-    }
-    
-    .quick-view-content > div {
-        grid-template-columns: 1fr !important;
-        gap: 20px;
-    }
-    
-    .floating-whatsapp {
-        width: 50px;
-        height: 50px;
-        font-size: 24px;
-        bottom: 15px;
-        right: 15px;
-    }
-}
-
-/* Small Mobile Devices (360px and below) */
-@media (max-width: 360px) {
-    .hero h1 {
-        font-size: 1.5rem;
-    }
-    
-    .category-btn {
-        min-width: 100px;
-        padding: 8px 12px;
-        font-size: 0.75rem;
-    }
-    
-    .products-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .product-price {
-        font-size: 1.2rem;
-    }
-    
-    .header-actions {
-        gap: 10px;
-    }
-    
-    .header-actions a {
-        font-size: 0.8rem;
-    }
-}
-
-/* Large Desktop Screens (1200px and above) */
-@media (min-width: 1200px) {
-    .container {
-        max-width: 1300px;
-    }
-    
-    .products-grid {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    }
-}
-
-/* Landscape Mobile Optimization */
-@media (max-height: 500px) and (orientation: landscape) {
-    .hero {
-        padding: 40px 0;
-    }
-    
-    .hero h1 {
-        font-size: 1.8rem;
-        margin-bottom: 10px;
-    }
-    
-    .hero p {
-        font-size: 1rem;
-        margin-bottom: 15px;
-    }
-}
-
-/* High-DPI Screens */
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    .logo img {
-        image-rendering: -webkit-optimize-contrast;
-    }
-}
-
-/* Print Styles */
-@media print {
-    .floating-whatsapp,
-    .header-actions,
-    .search-bar,
-    .main-nav {
-        display: none !important;
-    }
-}
-
-/* ===== TOUCH DEVICE OPTIMIZATIONS ===== */
-@media (hover: none) and (pointer: coarse) {
-    .product-card:hover {
-        transform: none;
-    }
-    
-    .quick-view-btn {
-        opacity: 1; /* Always visible on touch devices */
-    }
-    
-    .category-btn:hover,
-    .add-to-cart:hover {
-        transform: none;
-    }
-}
-
-/* ===== IMPROVED ACCESSIBILITY ===== */
-@media (prefers-reduced-motion: reduce) {
-    * {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-    }
-}
         .product-card {
             background: var(--secondary);
             border-radius: 15px;
@@ -676,7 +504,74 @@
             box-shadow: 0 3px 10px rgba(0,0,0,0.2);
         }
 
-        /*   UPDATED IMAGE STYLES - WITH ZOOM EFFECT */
+        /* Wishlist Button */
+        .wishlist-btn {
+            position: absolute;
+            top: 15px;
+            right: 50px;
+            background: var(--secondary);
+            color: var(--primary);
+            border: 1px solid var(--primary);
+            padding: 8px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+            opacity: 0;
+            z-index: 3;
+            width: 35px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .product-card:hover .wishlist-btn {
+            opacity: 1;
+        }
+
+        .wishlist-btn:hover {
+            background: var(--primary);
+            color: var(--secondary);
+        }
+
+        .wishlist-btn.active {
+            background: var(--primary);
+            color: var(--secondary);
+        }
+
+        .wishlist-btn.active i {
+            font-weight: 900;
+        }
+
+        /* Quick View Button */
+        .quick-view-btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--secondary);
+            color: var(--primary);
+            border: 1px solid var(--primary);
+            padding: 8px 12px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.8rem;
+            transition: all 0.3s;
+            opacity: 0;
+            z-index: 3;
+        }
+
+        .product-card:hover .quick-view-btn {
+            opacity: 1;
+        }
+
+        .quick-view-btn:hover {
+            background: var(--primary);
+            color: var(--secondary);
+        }
+
+        /* Product Image */
         .product-image {
             width: 100%;
             height: 220px;
@@ -718,7 +613,8 @@
             height: 50px;
             overflow: hidden;
             display: -webkit-box;
-            -webkit-line-clampz: 2;
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
             -webkit-box-orient: vertical;
         }
 
@@ -759,51 +655,17 @@
             box-shadow: 0 5px 15px rgba(139, 69, 19, 0.3);
         }
 
-        /* Quick View Button */
-        .quick-view-btn {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background: var(--secondary);
-            color: var(--primary);
-            border: 1px solid var(--primary);
-            padding: 8px 12px;
-            border-radius: 20px;
-            cursor: pointer;
-            font-weight: 600;
-            font-size: 0.8rem;
-            transition: all 0.3s;
-            opacity: 0;
-            z-index: 3;
-        }
-
-        .product-card:hover .quick-view-btn {
-            opacity: 1;
-        }
-
-        .quick-view-btn:hover {
-            background: var(--primary);
-            color: var(--secondary);
-        }
-
         /* About Us Section */
         .about-section {
-.about-section {
-    background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
-    /* Remove the background-image entirely */
-    background-size: auto;
-    background-position: auto;
-    /* ... rest of your code ... */
-}    background-attachment: scroll; /* Change from fixed to scroll */
-    background-repeat: no-repeat;
-     padding: 80px 0;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            background-attachment: scroll;
+            background-repeat: no-repeat;
+            padding: 80px 0;
             margin: 60px 0;
             color: var(--secondary);
             text-align: center;
             border-radius: 15px;
-}
-           
-        
+        }
 
         .about-content {
             max-width: 800px;
@@ -814,12 +676,13 @@
             border: 2px solid var(--secondary);
         }
 
-.about-content h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: var(--primary); /* Change to brown */
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.3); /* Optional: adds readability */
-}
+        .about-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--secondary);
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+
         .about-content p {
             font-size: 1.1rem;
             line-height: 1.8;
@@ -860,38 +723,159 @@
             text-align: left;
         }
 
-        /* Color Variants */
-        .color-options {
+        /* Share Buttons */
+        .share-buttons {
             display: flex;
-            gap: 8px;
-            margin: 10px 0;
+            gap: 15px;
+            margin: 25px 0;
+            justify-content: center;
         }
 
-        .color-swatch {
-            width: 25px;
-            height: 25px;
-            border-radius: 50%;
-            cursor: pointer;
-            border: 2px solid transparent;
-            transition: border 0.3s;
-        }
-
-        .color-swatch.active {
-            border: 2px solid var(--primary);
-        }
-
-        /* Size Guide */
-        .size-guide-btn {
-            background: none;
+        .share-btn {
+            background: var(--primary);
+            color: var(--secondary);
             border: none;
-            color: var(--primary);
-            text-decoration: underline;
+            padding: 12px 20px;
+            border-radius: 30px;
             cursor: pointer;
-            font-size: 0.9rem;
-            margin: 10px 0;
             display: flex;
             align-items: center;
-            gap: 5px;
+            gap: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .share-btn:hover {
+            background: var(--accent);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(139, 69, 19, 0.3);
+        }
+
+        /* Account Modal Styles */
+        .account-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            z-index: 2000;
+        }
+
+        .account-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: var(--secondary);
+            padding: 30px;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 500px;
+            max-height: 80vh;
+            overflow-y: auto;
+            border: 2px solid var(--primary);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+        }
+
+        .account-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            border-bottom: 2px solid var(--gray);
+            padding-bottom: 15px;
+        }
+
+        .account-header h2 {
+            color: var(--primary);
+            margin: 0;
+        }
+
+        .close-account {
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: var(--primary);
+            transition: color 0.3s;
+        }
+
+        .close-account:hover {
+            color: var(--accent);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--dark);
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid var(--gray);
+            border-radius: 8px;
+            font-size: 1rem;
+            background: var(--light);
+            color: var(--dark);
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        .create-account-btn,
+        .login-btn {
+            background: var(--primary);
+            color: var(--secondary);
+            border: none;
+            padding: 15px 30px;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .create-account-btn:hover,
+        .login-btn:hover {
+            background: var(--accent);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(139, 69, 19, 0.3);
+        }
+
+        .account-footer {
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid var(--gray);
+        }
+
+        .account-footer a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .account-footer a:hover {
+            text-decoration: underline;
         }
 
         /* Cart Modal */
@@ -1064,51 +1048,6 @@
             box-shadow: 0 15px 35px rgba(0,0,0,0.5);
         }
 
-        /* Size Guide Modal */
-        .size-guide-modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.7);
-            z-index: 2000;
-        }
-
-        .size-guide-content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: var(--secondary);
-            padding: 30px;
-            border-radius: 15px;
-            width: 90%;
-            max-width: 600px;
-            max-height: 80vh;
-            overflow-y: auto;
-            border: 2px solid var(--primary);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
-        }
-
-        .size-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
-
-        .size-table th, .size-table td {
-            border: 1px solid var(--gray);
-            padding: 10px;
-            text-align: center;
-        }
-
-        .size-table th {
-            background: var(--primary);
-            color: var(--secondary);
-        }
-
         /* Floating WhatsApp Button */
         .floating-whatsapp {
             position: fixed;
@@ -1214,92 +1153,174 @@
             animation: fadeIn 0.6s ease-out;
         }
 
-        .whatsapp-link {
-            background: #25D366;
-            color: white;
-            padding: 12px 20px;
-            border-radius: 25px;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            margin-top: 10px;
-            transition: all 0.3s;
-            font-weight: 600;
+        @keyframes slideIn {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
         }
 
-        .whatsapp-link:hover {
-            background: #128C7E;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
-        }
-
-        /* Share Buttons */
-        .share-buttons {
-            display: flex;
-            gap: 15px;
-            margin: 25px 0;
-            justify-content: center;
-        }
-
-        .share-btn {
-            background: var(--primary);
-            color: var(--secondary);
-            border: none;
-            padding: 12px 20px;
-            border-radius: 30px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 1rem;
-            font-weight: 600;
-            transition: all 0.3s;
-        }
-
-        .share-btn:hover {
-            background: var(--accent);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(139, 69, 19, 0.3);
+        @keyframes slideOut {
+            from { transform: translateX(0); opacity: 1; }
+            to { transform: translateX(100%); opacity: 0; }
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
+            .top-bar .container {
+                flex-direction: column;
+                gap: 8px;
+                text-align: center;
+                font-size: 0.8rem;
+            }
+
+            /* --- MOBILE CLEANUP FIXES (Option A) --- */
+
+/* Reduce hero height */
+.hero {
+    padding: 50px 20px;
+}
+.hero h1 {
+    font-size: 1.8rem;
+}
+.hero p {
+    font-size: 1rem;
+}
+
+/* Compact header */
+.header-main .container {
+    padding: 10px 0;
+}
+.logo img {
+    height: 60px;
+    max-width: 150px;
+}
+
+/* Reduce button sizes */
+.account-highlight, .cart-highlight {
+    padding: 8px 12px !important;
+    font-size: 0.75rem;
+}
+
+/* Search Bar tighter */
+.search-bar input {
+    padding: 10px 15px;
+    font-size: 0.85rem;
+}
+.search-bar button {
+    padding: 0 18px;
+}
+
+/* Improve spacing on category buttons */
+.category-btn {
+    padding: 10px 18px;
+    font-size: 0.85rem;
+}
+
+/* Improve product grid spacing */
+.products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+.product-card {
+    border-radius: 10px;
+}
+.product-image {
+    height: 160px;
+}
+
+/* Product titles smaller */
+.product-title {
+    font-size: 0.9rem;
+    height: 40px;
+}
+
+/* Price styling */
+.product-price {
+    font-size: 1.1rem;
+}
+
+/* Buttons */
+.add-to-cart {
+    padding: 12px 15px;
+    font-size: 0.85rem;
+}
+
+/* Modal fixes */
+.account-content, .cart-content, .quick-view-content {
+    padding: 20px;
+    width: 95%;
+}
+
+/* Footer padding reduced */
+footer {
+    padding: 40px 0 20px;
+}
+            
             .header-main .container {
                 flex-wrap: wrap;
-                padding: 15px 0;
+                gap: 15px;
             }
             
             .logo {
-                margin-right: 20px;
-                min-width: 280px;
+                min-width: 200px;
+                margin-right: 0;
+                text-align: center;
             }
             
             .logo img {
-                height: 90px;
+                height: 80px;
+                max-width: 200px;
             }
             
             .search-bar {
                 order: 3;
-                margin: 15px 0 0 0;
+                margin: 10px 0 0 0;
                 max-width: 100%;
+                min-width: 100%;
             }
             
             .header-actions {
                 margin-left: auto;
+                margin-right: auto;
+                gap: 10px;
+            }
+            
+            .account-highlight, .cart-highlight {
+                padding: 10px 15px !important;
+                font-size: 0.8rem;
+            }
+            
+            .account-creation-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                text-align: center;
+            }
+            
+            .account-text h2 {
+                font-size: 2rem;
+            }
+            
+            .main-nav .container {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+                padding: 12px 0;
+            }
+            
+            .hero {
+                padding: 80px 20px;
             }
             
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 2.2rem;
             }
             
             .hero p {
                 font-size: 1.1rem;
             }
             
-            .category-btn {
-                padding: 12px 20px;
-                font-size: 0.9rem;
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
             }
             
             .about-content {
@@ -1310,35 +1331,57 @@
                 font-size: 2rem;
             }
         }
-        
+
         @media (max-width: 480px) {
-            .hero {
-                padding: 80px 0;
+            .container {
+                width: 95%;
             }
             
-            .hero h1 {
-                font-size: 2rem;
+            /* --- SMALL PHONE POLISH --- */
+
+.hero {
+    padding: 40px 10px;
+}
+.hero h1 {
+    font-size: 1.5rem;
+}
+.hero p {
+    font-size: 0.9rem;
+}
+
+.product-image {
+    height: 140px;
+}
+
+.add-to-cart {
+    padding: 10px;
+    font-size: 0.8rem;
+}
+
+.category-btn {
+    padding: 8px 14px;
+    font-size: 0.75rem;
+}
+
+            .products-grid {
+                grid-template-columns: 1fr;
             }
             
-            .section-title {
-                font-size: 1.8rem;
+            .account-highlight .account-text,
+            .cart-highlight .cart-text {
+                display: none;
             }
             
-            .category-filters {
-                gap: 10px;
+            .account-highlight, .cart-highlight {
+                padding: 12px !important;
             }
             
-            .category-btn {
-                padding: 10px 15px;
-                font-size: 0.85rem;
+            .user-name {
+                display: none;
             }
             
-            .logo {
-                min-width: 240px;
-            }
-            
-            .logo img {
-                height: 70px;
+            .user-profile {
+                padding: 10px 12px;
             }
         }
     </style>
@@ -1346,17 +1389,18 @@
 <body>
     <!-- Top Bar -->
     <div class="top-bar">
-        <div class="container">
-            <div>🔥 Premium Fashion & Home Items - Lagos, Nigeria</div>
-            <div>📞 +234 803 426 3004 |📧 runzthemmy7@gmail.com</div>
-        </div>
+    <div class="container">
+        <div>&#128293; Premium Fashion & Home Items - Lagos, Nigeria</div>
+        <div>&#128222; +234 803 426 3004 |&#128231; runzthemmy7@gmail.com</div>
     </div>
+</div>
+
 
     <!-- Header -->
     <header class="header-main">
         <div class="container">
             <div class="logo">
-                <img src="https://i.ibb.co/8LBxSYrc/Whats-App-Image-2025-10-23-at-18-49-19-5e7f693b.jpg " alt="Themmytee Wears & Wares - Premium Fashion and Household Store Nigeria">
+                <img src="https://i.ibb.co/8LBxSYrc/Whats-App-Image-2025-10-23-at-18-49-19-5e7f693b.jpg" alt="Themmytee Wears & Wares - Premium Fashion and Household Store Nigeria">
             </div>
             
             <div class="search-bar">
@@ -1365,7 +1409,22 @@
             </div>
 
             <div class="header-actions">
-                <a href="#" onclick="openCart()"><i class="fas fa-shopping-bag"></i> Bag (<span id="cartCount">0</span>)</a>
+                <a href="#" onclick="openAccountModal()" id="accountLink" class="account-highlight">
+                    <i class="fas fa-user-circle"></i> 
+                    <span class="account-text">MY ACCOUNT</span>
+                </a>
+                <div class="user-profile" id="userProfile" style="display: none;">
+                    <div class="user-avatar" id="userAvatar"></div>
+                    <span class="user-name" id="userName"></span>
+                    <div class="user-dropdown" id="userDropdown">
+                        <a href="account.html"><i class="fas fa-user"></i> My Account</a>
+                        <a href="#" onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                    </div>
+                </div>
+                <a href="#" onclick="openCart()" class="cart-highlight">
+                    <i class="fas fa-shopping-bag"></i> 
+                    <span class="cart-text">BAG (<span id="cartCount">0</span>)</span>
+                </a>
             </div>
         </div>
     </header>
@@ -1373,8 +1432,8 @@
     <!-- Navigation -->
     <nav class="main-nav">
         <div class="container">
-            <a href="#"><i class="fas fa-home"></i>  Home</a>
-            <a href="#" onclick="filterByDeals()"><i class="fas fa-fire"></i>  Hot Deals</a>
+            <a href="#"><i class="fas fa-home"></i> Home</a>
+            <a href="#" onclick="filterByDeals()"><i class="fas fa-fire"></i> Hot Deals</a>
         </div>
     </nav>
 
@@ -1396,6 +1455,44 @@
         </div>
     </section>
 
+    <!-- Account Creation Section -->
+    <section class="account-creation-section">
+        <div class="container">
+            <div class="account-creation-content">
+                <div class="account-text">
+                    <h2>Create Your Account & Unlock Benefits!</h2>
+                    <div class="benefits-list">
+                        <div class="benefit-item">
+                            <i class="fas fa-bolt"></i>
+                            <span>Faster checkout with saved details</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-history"></i>
+                            <span>Track your order history</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-gift"></i>
+                            <span>Exclusive deals and offers</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-star"></i>
+                            <span>Personalized shopping experience</span>
+                        </div>
+                    </div>
+                    <button class="create-account-btn-large" onclick="openAccountModal()">
+                        <i class="fas fa-user-plus"></i> Create Free Account
+                    </button>
+                </div>
+                <div class="account-visual">
+                    <div class="visual-placeholder">
+                        <i class="fas fa-user-shield"></i>
+                        <p>Secure & Easy Account Setup</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Main Content -->
     <div class="container">
         <!-- Categories -->
@@ -1403,25 +1500,25 @@
             <h2 style="text-align: center; margin-bottom: 25px; color: var(--primary);">SHOP BY CATEGORY - NIGERIA'S PREMIUM SELECTION</h2>
             <div class="category-filters">
                 <button class="category-btn active" data-category="all">
-                    <i class="fas fa-th-large"></i>  All Items
+                    <i class="fas fa-th-large"></i> All Items
                 </button>
                 <button class="category-btn" data-category="mens">
-                    <i class="fas fa-tshirt"></i>  Men's Fashion
+                    <i class="fas fa-tshirt"></i> Men's Fashion
                 </button>
                 <button class="category-btn" data-category="womens">
-                    <i class="fas fa-female"></i>  Women's Fashion
+                    <i class="fas fa-female"></i> Women's Fashion
                 </button>
                 <button class="category-btn" data-category="unisex">
-                    <i class="fas fa-tshirt"></i>  Unisex
+                    <i class="fas fa-tshirt"></i> Unisex
                 </button>
                 <button class="category-btn" data-category="kids">
-                    <i class="fas fa-child"></i>  Kids & Toys
+                    <i class="fas fa-child"></i> Kids & Toys
                 </button>               
                 <button class="category-btn" data-category="neatly used items">
-                    <i class="fas fa-tshirt"></i>  Neatly used items
+                    <i class="fas fa-tshirt"></i> Neatly used items
                 </button> 
                 <button class="category-btn" data-category="home">
-                    <i class="fas fa-home"></i>  Household Items
+                    <i class="fas fa-home"></i> Household Items
                 </button>
             </div>
         </section>
@@ -1480,9 +1577,7 @@
             <div class="cart-items" id="cartItems">
                 <!-- Cart items will be displayed here -->
             </div>
-            <div class="cart-total">
-                Total: ₦<span id="cartTotal">0</span>
-            </div>
+           <div class="cart-total">Total: &#8358;<span id="cartTotal">0</span></div>
             <button class="checkout-btn" onclick="proceedToCheckout()">
                 <i class="fab fa-whatsapp"></i> Checkout via WhatsApp
             </button>
@@ -1502,8 +1597,103 @@
         </div>
     </div>
 
-    <!-- Size Guide Modal -->
-                    </div>
+    <!-- Account Creation Modal -->
+    <div class="account-modal" id="accountModal">
+        <div class="account-content">
+            <div class="account-header">
+                <h2>Create Your Account</h2>
+                <button class="close-account" onclick="closeAccountModal()">&times;</button>
+            </div>
+            <form id="signupForm" onsubmit="handleSignup(event)">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required minlength="6">
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Delivery Address (Lagos)</label>
+                    <textarea id="address" name="address" rows="3" required></textarea>
+                </div>
+                <button type="submit" class="create-account-btn">
+                    <i class="fas fa-user-plus"></i> Create Account
+                </button>
+            </form>
+            <div class="account-footer">
+                <p>Already have an account? <a href="#" onclick="openLoginModal()">Login here</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="account-modal" id="loginModal">
+        <div class="account-content">
+            <div class="account-header">
+                <h2>Login to Your Account</h2>
+                <button class="close-account" onclick="closeLoginModal()">&times;</button>
+            </div>
+            <form id="loginForm" onsubmit="handleLogin(event)">
+                <div class="form-group">
+                    <label for="loginEmail">Email Address</label>
+                    <input type="email" id="loginEmail" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" name="password" required>
+                </div>
+                <button type="submit" class="login-btn">
+                    <i class="fas fa-sign-in-alt"></i> Login
+                </button>
+            </form>
+            <div class="account-footer">
+                <p>Don't have an account? <a href="#" onclick="openAccountModal()">Create one here</a></p>
+                <p><a href="#" onclick="openForgotPasswordModal()">Forgot your password?</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Forgot Password Modal -->
+    <div class="account-modal" id="forgotPasswordModal">
+        <div class="account-content">
+            <div class="account-header">
+                <h2>Reset Your Password</h2>
+                <button class="close-account" onclick="closeForgotPasswordModal()">&times;</button>
+            </div>
+            <form id="forgotPasswordForm" onsubmit="handleForgotPassword(event)">
+                <div class="form-group">
+                    <label for="resetEmail">Email Address</label>
+                    <input type="email" id="resetEmail" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="resetPhone">Phone Number</label>
+                    <input type="tel" id="resetPhone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="newPassword">New Password</label>
+                    <input type="password" id="newPassword" name="newPassword" required minlength="6">
+                </div>
+                <button type="submit" class="create-account-btn">
+                    <i class="fas fa-key"></i> Reset Password
+                </button>
+            </form>
+            <div class="account-footer">
+                <p>Remember your password? <a href="#" onclick="openLoginModal()">Login here</a></p>
+            </div>
+        </div>
     </div>
 
     <!-- Floating WhatsApp Button -->
@@ -1517,53 +1707,285 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <div class="footer-logo">
-                        <img src="https://i.ibb.co/8LBxSYrc/Whats-App-Image-2025-10-23-at-18-49-19-5e7f693b.jpg " alt="Themmytee Wears & Wares - Premium Fashion and Household Store Nigeria">
+                        <img src="https://i.ibb.co/8LBxSYrc/Whats-App-Image-2025-10-23-at-18-49-19-5e7f693b.jpg" alt="Themmytee Wears & Wares - Premium Fashion and Household Store Nigeria">
                     </div>
                     <h3>THEMMYTEE STORE - LAGOS</h3>
                     <p>We specialize in premium fashion wears for men, women, and children, alongside luxury household equipment in Nigeria. We prioritize quality in every product we offer, ensuring our customers get the best value for their money.</p>
                 </div>
-                <div class="footer-section">
-                    <h3>QUICK LINKS</h3>
-                    <a href="#about">🏷️ About Us</a>
-                    <a href="#contact">📞 Contact Us</a>
-                    <a href="#products">🛍️ Our Products</a>
-                    <a href="#" onclick="filterByDeals()">🔥 Hot Deals</a>
-                </div>
-                <div class="footer-section" id="contact">
-                    <h3>CONTACT US - NIGERIA</h3>
-                    <p>📞 +234 803 426 3004</p>
-                    <p>📧 runzthemmy7@gmail.com</p>
-                    <p>📍 Lagos, Nigeria</p>
-                  <div style="margin-top: 15px;">
-    <a href="https://instagram.com/themmytee_7" target="_blank" style="color: #E8D5B5; text-decoration: none; display: block; margin-bottom: 8px;">
-        <i class="fab fa-instagram"></i> Instagram
-    </a>
-    <a href="https://tiktok.com/@them_my_tee" target="_blank" style="color: #E8D5B5; text-decoration: none; display: block;">
-        <i class="fab fa-tiktok"></i> TikTok
-    </a>
+               <div class="footer-section">
+    <h3>QUICK LINKS</h3>
+    <a href="#about">&#127991; About Us</a>
+    <a href="#contact">&#128222; Contact Us</a>
+    <a href="#products">&#128717; Our Products</a>
+    <a href="#" onclick="filterByDeals()">&#128293; Hot Deals</a>
 </div>
-                  
-                    <!-- WhatsApp button removed as requested -->
+
+                <div class="footer-section" id="contact">
+    <h3>CONTACT US - NIGERIA</h3>
+    <p>&#128222; +234 803 426 3004</p>
+    <p>&#128231; runzthemmy7@gmail.com</p>
+    <p>&#128205; Lagos, Nigeria</p>
+                    <div style="margin-top: 15px;">
+                        <a href="https://instagram.com/themmytee_7" target="_blank" style="color: #E8D5B5; text-decoration: none; display: block; margin-bottom: 8px;">
+                            <i class="fab fa-instagram"></i> Instagram
+                        </a>
+                        <a href="https://tiktok.com/@them_my_tee" target="_blank" style="color: #E8D5B5; text-decoration: none; display: block;">
+                            <i class="fab fa-tiktok"></i> TikTok
+                        </a>
+                    </div>
                 </div>
                 <div class="footer-section">
-                    <h3>WHAT WE SELL IN NIGERIA</h3>
-                    <p> Men's & Women's Fashion</p>
-                    <p> Unisex Items</p>
-                    <p> Kids Wears & Toys</p>
-                    <p> Household Equipment</p>
-                    <p> Electrical Appliances</p>
-                </div>
+    <h3>WHAT WE SELL IN NIGERIA</h3>
+    <p>&#128084; Men's & Women's Fashion</p>
+    <p>&#128087; Unisex Items</p>
+    <p>&#127868; Kids Wears & Toys</p>
+    <p>&#127968; Household Equipment</p>
+    <p>&#9889; Electrical Appliances</p>
+</div>
+
             </div>
             <div class="copyright">
                 &copy; 2025 Themmytee Wears & Wares - Lagos, Nigeria. All rights reserved.
             </div>
         </div>
     </footer>
-
     <script>
-        //   UPDATED PRODUCTS DATA - WITHOUT URGENCY/SOCIAL PROOF ELEMENTS
+        // User Account Management
+        let currentUser = JSON.parse(localStorage.getItem('currentUser'));
+        let users = JSON.parse(localStorage.getItem('themmyteeUsers')) || [];
+        let cart = [];
+        let currentCategory = 'all';
+
+        // Initialize user state
+        function initUserState() {
+            if (currentUser) {
+                showUserProfile();
+                toggleAccountCreationSection();
+            }
+        }
+
+        // Show user profile in header when logged in
+        function showUserProfile() {
+            document.getElementById('accountLink').style.display = 'none';
+            document.getElementById('userProfile').style.display = 'flex';
+            document.getElementById('userName').textContent = currentUser.fullName.split(' ')[0];
+            document.getElementById('userAvatar').textContent = currentUser.fullName.charAt(0).toUpperCase();
+        }
+
+        // Hide user profile (for logout)
+        function hideUserProfile() {
+            document.getElementById('accountLink').style.display = 'flex';
+            document.getElementById('userProfile').style.display = 'none';
+        }
+
+        // Logout function
+        function logout() {
+            currentUser = null;
+            localStorage.removeItem('currentUser');
+            hideUserProfile();
+            toggleAccountCreationSection();
+            showNotification('You have been logged out. See you soon! 👋');
+        }
+
+        // Account Modal Functions
+        function openAccountModal() {
+            if (currentUser) {
+                window.location.href = 'account.html';
+                return;
+            }
+            document.getElementById('accountModal').style.display = 'block';
+        }
+
+        function closeAccountModal() {
+            document.getElementById('accountModal').style.display = 'none';
+            document.getElementById('signupForm').reset();
+        }
+
+        function openLoginModal() {
+            if (currentUser) {
+                window.location.href = 'account.html';
+                return;
+            }
+            closeAccountModal();
+            document.getElementById('loginModal').style.display = 'block';
+        }
+
+        function closeLoginModal() {
+            document.getElementById('loginModal').style.display = 'none';
+            document.getElementById('loginForm').reset();
+        }
+
+        // Forgot Password Functions
+        function openForgotPasswordModal() {
+            closeLoginModal();
+            document.getElementById('forgotPasswordModal').style.display = 'block';
+        }
+
+        function closeForgotPasswordModal() {
+            document.getElementById('forgotPasswordModal').style.display = 'none';
+            document.getElementById('forgotPasswordForm').reset();
+        }
+
+        function handleForgotPassword(event) {
+            event.preventDefault();
+            
+            const formData = new FormData(event.target);
+            const email = formData.get('email').toLowerCase();
+            const phone = formData.get('phone');
+            const newPassword = formData.get('newPassword');
+
+            const userIndex = users.findIndex(user => user.email === email && user.phone === phone);
+
+            if (userIndex === -1) {
+                alert('No account found with this email and phone combination.');
+                return;
+            }
+
+            users[userIndex].password = newPassword;
+            localStorage.setItem('themmyteeUsers', JSON.stringify(users));
+            
+            closeForgotPasswordModal();
+            showNotification('Password reset successfully! You can now login with your new password.');
+            
+            setTimeout(() => {
+                openLoginModal();
+            }, 1000);
+        }
+
+        // Handle Signup
+        function handleSignup(event) {
+            event.preventDefault();
+            
+            const formData = new FormData(event.target);
+            const userData = {
+                id: Date.now(),
+                fullName: formData.get('fullName'),
+                email: formData.get('email').toLowerCase(),
+                phone: formData.get('phone'),
+                password: formData.get('password'),
+                address: formData.get('address'),
+                createdAt: new Date().toISOString(),
+                orders: [],
+                wishlist: [],
+                reviews: []
+            };
+
+            if (formData.get('password') !== formData.get('confirmPassword')) {
+                alert('Passwords do not match!');
+                return;
+            }
+
+            if (users.find(user => user.email === userData.email)) {
+                alert('An account with this email already exists!');
+                return;
+            }
+
+            users.push(userData);
+            localStorage.setItem('themmyteeUsers', JSON.stringify(users));
+            
+            currentUser = userData;
+            localStorage.setItem('currentUser', JSON.stringify(currentUser));
+            
+            showUserProfile();
+            toggleAccountCreationSection();
+            closeAccountModal();
+            
+            showNotification(`Welcome to Themmytee, ${userData.fullName.split(' ')[0]}! 🎉`);
+        }
+
+        // Handle Login
+        function handleLogin(event) {
+            event.preventDefault();
+            
+            const formData = new FormData(event.target);
+            const email = formData.get('email').toLowerCase();
+            const password = formData.get('password');
+
+            const user = users.find(u => u.email === email && u.password === password);
+            
+            if (user) {
+                currentUser = user;
+                localStorage.setItem('currentUser', JSON.stringify(currentUser));
+                showUserProfile();
+                toggleAccountCreationSection();
+                closeLoginModal();
+                showNotification(`Welcome back, ${user.fullName.split(' ')[0]}! 🎉`);
+            } else {
+                alert('Invalid email or password!');
+            }
+        }
+
+        // Wishlist functionality
+        function toggleWishlist(productId) {
+            if (!currentUser) {
+                alert('Please login to add items to your wishlist!');
+                openLoginModal();
+                return;
+            }
+
+            const product = products.find(p => p.id === productId);
+            const userIndex = users.findIndex(u => u.email === currentUser.email);
+            
+            if (userIndex === -1) return;
+
+            if (!users[userIndex].wishlist) {
+                users[userIndex].wishlist = [];
+            }
+
+            const wishlistItemIndex = users[userIndex].wishlist.findIndex(item => item.productId === productId);
+            const wishlistBtn = document.getElementById(`wishlist-${productId}`);
+            
+            if (wishlistItemIndex === -1) {
+                users[userIndex].wishlist.push({
+                    productId: productId,
+                    id: productId,
+                    name: product.name,
+                    price: product.price,
+                    image: product.image,
+                    category: product.category,
+                    addedAt: new Date().toISOString()
+                });
+                wishlistBtn.innerHTML = '<i class="fas fa-heart"></i>';
+                wishlistBtn.classList.add('active');
+                showNotification('Added to wishlist! 💖');
+            } else {
+                users[userIndex].wishlist.splice(wishlistItemIndex, 1);
+                wishlistBtn.innerHTML = '<i class="far fa-heart"></i>';
+                wishlistBtn.classList.remove('active');
+                showNotification('Removed from wishlist');
+            }
+
+            localStorage.setItem('themmyteeUsers', JSON.stringify(users));
+            currentUser.wishlist = users[userIndex].wishlist;
+            localStorage.setItem('currentUser', JSON.stringify(currentUser));
+        }
+
+        // Update wishlist buttons when displaying products
+        function updateWishlistButtons() {
+            if (!currentUser || !currentUser.wishlist) return;
+            
+            currentUser.wishlist.forEach(item => {
+                const wishlistBtn = document.getElementById(`wishlist-${item.productId}`);
+                if (wishlistBtn) {
+                    wishlistBtn.innerHTML = '<i class="fas fa-heart"></i>';
+                    wishlistBtn.classList.add('active');
+                }
+            });
+        }
+
+        // Function to toggle account creation section visibility
+        function toggleAccountCreationSection() {
+            const accountSection = document.querySelector('.account-creation-section');
+            if (currentUser) {
+                accountSection.style.display = 'none';
+            } else {
+                accountSection.style.display = 'block';
+            }
+        }
+
+        // Sample products data
         const products = [
-            {
+                              {
                 id: 1,
                 name: "Vionic Ava wedge",
                 price: 30000,
@@ -1664,7 +2086,7 @@
             },
             {
                  id: 11,
-                name: "kids writing pad-16 inches",
+                name: "Kids writing pad-16 inches",
                 price: 8500,
                 category: "kids",
                 image: "https://i.ibb.co/8gNDgk7d/Whats-App-Image-2025-10-13-at-13-10-00-ed5b4ad5.jpg", // ← REPLACE WITH YOUR IMAGE
@@ -1673,7 +2095,7 @@
             },
             {
                  id: 12,
-                name: "kids writing pad-12 inches",
+                name: "Kids writing pad-12 inches",
                 price: 7000,
                 category: "kids",
                 image: "https://i.ibb.co/8gNDgk7d/Whats-App-Image-2025-10-13-at-13-10-00-ed5b4ad5.jpg", // ← REPLACE WITH YOUR IMAGE
@@ -1682,7 +2104,7 @@
             },
             {
                  id: 13,
-                name: "kids writing pad-10 inches",
+                name: "Kids writing pad-10 inches",
                 price: 6300,
                 category: "kids",
                 image: "https://i.ibb.co/8gNDgk7d/Whats-App-Image-2025-10-13-at-13-10-00-ed5b4ad5.jpg", // ← REPLACE WITH YOUR IMAGE
@@ -1691,7 +2113,7 @@
             },
             {
                  id: 14,
-                name: "kids writing pad 8.5 inches",
+                name: "Kids writing pad 8.5 inches",
                 price: 5800,
                 category: "kids",
                 image: "https://i.ibb.co/8gNDgk7d/Whats-App-Image-2025-10-13-at-13-10-00-ed5b4ad5.jpg", // ← REPLACE WITH YOUR IMAGE
@@ -1718,7 +2140,7 @@
             },
             {
                  id: 17,
-                name: "men's gift set",
+                name: "Men's gift set",
                 price: 27000,
                 category: "mens",
                 image: "https://i.ibb.co/YTqXycNL/Whats-App-Image-2025-10-13-at-12-56-30-f1c12a43.jpg", // ← REPLACE WITH YOUR IMAGE
@@ -2040,7 +2462,7 @@
             {
                  id: 51,
                 name: "Lexibook",
-                price: "30000",
+                price: "30,000",
                 category: "kids",
                 image: "https://i.ibb.co/QvS2HJyD/Whats-App-Image-2025-10-13-at-18-22-59-fda3d65a.jpg", // ← REPLACE WITH YOUR IMAGE
                 badge: "SALE",
@@ -2048,7 +2470,7 @@
             },
             {
                  id: 52,
-                name: "tote bag",
+                name: "Tote bag",
                 price: "Price on Request",
                 category: "womens",
                 image: "https://i.ibb.co/FbgT9p8M/Whats-App-Image-2025-10-14-at-09-28-19-3eb63441.jpg", // ← REPLACE WITH YOUR IMAGE
@@ -2058,7 +2480,7 @@
             {
                  id: 53,
                 name: "Musical and educational teddy bear",
-                price: "20000",
+                price: "20,000",
                 category: "kids",
                 image: "https://i.ibb.co/xSDdM27B/Whats-App-Image-2025-10-13-at-18-25-14-a8c72d20.jpg", // ← REPLACE WITH YOUR IMAGE
                 badge: "SALE",
@@ -2068,7 +2490,7 @@
             {
                  id: 54,
                 name: "",
-                price: "32000",
+                price: "32,000",
                 category: "mens",
                 image: "https://i.ibb.co/CsVkPCzz/Whats-App-Image-2025-10-21-at-18-37-03-292d1a61.jpg", // ← REPLACE WITH YOUR IMAGE
                 badge: "40-46",
@@ -2077,7 +2499,7 @@
             {
                 id: 55,
                 name: "",
-                price: "43000",
+                price: "43,000",
                 category: "mens",
                 image: "https://i.ibb.co/CpSbGptY/Whats-App-Image-2025-10-21-at-18-37-55-a8f4fcce.jpg", // ← REPLACE WITH YOUR IMAGE
                 badge: "43-46",
@@ -2105,7 +2527,7 @@
             {
                  id: 58,
                 name: "",
-                price: "10000",
+                price: "10,000",
                 category: "neatly used items",
                 image: "images/product-3.jpg", // ← REPLACE WITH YOUR IMAGE
                 badge: "40/41",
@@ -2114,7 +2536,7 @@
             {
                 id: 59,
                 name: "",
-                price: "12000",
+                price: "12,000",
                 category: "neatly used items",
                 image: "images/product-4.jpg", // ← REPLACE WITH YOUR IMAGE
                 badge: "40",
@@ -2123,7 +2545,7 @@
             {
                 id: 60,
                 name: "",
-                price: "10500",
+                price: "10,500",
                 category: "neatly used items",
                 image: "images/product-5.jpg", // ← REPLACE WITH YOUR IMAGE
                 badge: "38",
@@ -2132,7 +2554,7 @@
             {
                  id: 61,
                 name: "",
-                price: "10000",
+                price: "10,000",
                 category: "neatly used items",
                 image: "images/product-6.jpg", // ← REPLACE WITH YOUR IMAGE
                 badge: "40",
@@ -2141,7 +2563,7 @@
             {
                  id: 62,
                 name: "",
-                price: "11000",
+                price: "11,000",
                 category: "neatly used items",
                 image: "images/product-7.jpg", // ← REPLACE WITH YOUR IMAGE
                 badge: "38/39",
@@ -2151,7 +2573,7 @@
             {
                  id: 63,
                 name: "",
-                price: "6000",
+                price: "6,000",
                 category: "neatly used items",
                 image: "images/product-8.jpg", // ← REPLACE WITH YOUR IMAGE
                 badge: "36",
@@ -2160,7 +2582,7 @@
             {
                 id: 64,
                 name: "",
-                price: "10000",
+                price: "10,000",
                 category: "neatly used items",
                 image: "images/product-9.jpg", // ← REPLACE WITH YOUR IMAGE
                 badge: "40",
@@ -2395,7 +2817,7 @@
             {
                  id: 89,
                 name: "7-in-1 kids adjustable basketball,football,golf......",
-                price: "400000",
+                price: "400,000",
                 category: "kids",
                 image: "images/product-17.jpg", // ← REPLACE WITH YOUR IMAGE
                 badge: "SALE",
@@ -2472,33 +2894,1013 @@
             {
                 id: 97,
                 name: "male footwear",
-                price: "43000",
+                price: "43,000",
                 category: "mens",
                 image: "https://i.ibb.co/jPxvJjg4/Whats-App-Image-2025-10-21-at-18-40-25-5a41d4ac.jpg", // ← REPLACE WITH YOUR IMAGE
                 badge: "40-46",
                 onDeal: true
                 
-            }
+            },
+            {
+                 id: 98,
+                name: "",
+                price: "20,000",
+                category: "womens",	
+                image: "images/product-42.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+             {
+                 id: 99,
+                name: "",
+                price: "10,000",
+                category: "womens",	
+                image: "images/product-43.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+            {
+                 id: 100,
+                name: "",
+                price: "20,500",
+                category: "womens",	
+                image: "images/product-44.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+            {
+                 id: 101,
+                name: "",
+                price: "20,500",
+                category: "womens",	
+                image: "images/product-45.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+            {
+                 id: 102,
+                name: "",
+                price: "21,000",
+                category: "womens",	
+                image: "images/product-46.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+            {
+                 id: 103,
+                name: "",
+                price: "22,000",
+                category: "womens",	
+                image: "images/product-47.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+            {
+                 id: 104,
+                name: "",
+                price: "22,000",
+                category: "womens",	
+                image: "images/product-48.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+            {
+                 id: 105,
+                name: "",
+                price: "6,500",
+                category: "womens",	
+                image: "images/product-49.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+            {
+                 id: 106,
+                name: "",
+                price: "6,000",
+                category: "womens",	
+                image: "images/product-50.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+            {
+                 id: 107,
+                name: "",
+                price: "21,000",
+                category: "womens",	
+                image: "images/product-51.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+            {
+                 id: 108,
+                name: "",
+                price: "20,500",
+                category: "womens",	
+                image: "images/product-52.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+             {
+                 id: 109,
+                name: "",
+                price: "21,500",
+                category: "womens",	
+                image: "images/product-53.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+             {
+                 id: 110,
+                name: "",
+                price: "21,000",
+                category: "womens",	
+                image: "images/product-54.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+             {
+                 id: 111,
+                name: "",
+                price: "21,500",
+                category: "womens",	
+                image: "images/product-55.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+             {
+                 id: 112,
+                name: "",
+                price: "20,500",
+                category: "womens",	
+                image: "images/product-56.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+             {
+                 id: 113,
+                name: "",
+                price: "20,000",
+                category: "womens",	
+                image: "images/product-57.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+             {
+                 id: 114,
+                name: "",
+                price: "4,500",
+                category: "kids",	
+                image: "images/product-58.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+             {
+                 id: 115,
+                name: "",
+                price: "4,500",
+                category: "kids",	
+                image: "images/product-59.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+             {
+                 id: 116,
+                name: "",
+                price: "3,500",
+                category: "kids",	
+                image: "images/product-60.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+             {
+                 id: 117,
+                name: "Nova hair dryer",
+                price: "5,800",
+                category: "home",	
+                image: "images/product-61.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+             {
+                 id: 118,
+                name: "2 in 1 Straightner",
+                price: "6,500",
+                category: "home",	
+                image: "images/product-62.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+             {
+                 id: 119,
+                name: "Hair clippers",
+                price: "21,000",
+                category: "home",	
+                image: "images/product-63.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+             {
+                 id: 120,
+                name: "Plate rack",
+                price: "31,000",
+                category: "home",	
+                image: "images/product-64.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+             {
+                 id: 121,
+                name: "Wooden kitchen cutleries",
+                price: "31,000",
+                category: "home",	
+                image: "images/product-65.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+             {
+                 id: 122,
+                name: "Electric Hair Clipper",
+                price: "13,000",
+                category: "home",	
+                image: "images/product-66.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+             {
+                 id: 123,
+                name: "5 in 1 Bosco food dehydrator",
+                price: "53,000",
+                category: "home",	
+                image: "images/product-67.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+             {
+                 id: 124,
+                name: "Portable electric lunch box",
+                price: "11,000",
+                category: "home",	
+                image: "images/product-68.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+             {
+                 id: 125,
+                name: "Food Flask",
+                price: "15,000",
+                category: "home",	
+                image: "images/product-69.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+             {
+                 id: 126,
+                name: "Key holder",
+                price: "2,000",
+                category: "home",	
+                image: "images/product-70.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+             {
+                 id: 127,
+                name: "Rainbow key holder",
+                price: "2,000",
+                category: "home",	
+                image: "images/product-71.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+             {
+                 id: 128,
+                name: "Drymill grinder",
+                price: "14,000",
+                category: "home",	
+                image: "images/product-72.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+             {
+                 id: 129,
+                name: "6 in 1 wall hook",
+                price: "3,500",
+                category: "home",	
+                image: "images/product-73.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+             {
+                 id: 130,
+                name: "Side tables",
+                price: "25,000",
+                category: "home",	
+                image: "images/product-74.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+             {
+                 id: 131,
+                name: "Solar and rechargeable 12 inches fan with 2 bulbs and solar panel",
+                price: "48,000",
+                category: "home",	
+                image: "images/product-75.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+             {
+                 id: 132,
+                name: "Solar fan and light",
+                price: "10,500",
+                category: "home",	
+                image: "images/product-76.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+             {
+                 id: 133,
+                name: "Solar light",
+                price: "11,000",
+                category: "home",	
+                image: "images/product-77.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+             {
+                 id: 134,
+                name: "Double bulbs solar wall lamp",
+                price: "10,000",
+                category: "home",	
+                image: "images/product-78.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+             {
+                 id: 135,
+                name: "Foldable phone stand with LED light",
+                price: "7,500",
+                category: "home",	
+                image: "images/product-79.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+             {
+                 id: 136,
+                name: "Selfie Ringlight",
+                price: "3,500",
+                category: "womens",	
+                image: "images/product-80.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+             {
+                 id: 137,
+                name: "Egg crate with cover",
+                price: "4,000",
+                category: "home",	
+                image: "images/product-81.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+             {
+                 id: 138,
+                name: "Drymill grinder",
+                price: "28,000",
+                category: "home",	
+                image: "images/product-82.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+             {
+                 id: 139,
+                name: "Portable wall clock",
+                price: "7,000",
+                category: "womens",	
+                image: "images/product-83.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+             {
+                 id: 140,
+                name: "Unisex sneakers",
+                price: "7,000",
+                category: "kids",	
+                image: "images/product-84.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "31-36",
+                onDeal: true
+            },
+             {
+                 id: 141,
+                name: "",
+                price: "7,000",
+                category: "kids",	
+                image: "images/product-85.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "25-30",
+                onDeal: true
+            },
+             {
+                 id: 142,
+                name: "",
+                price: "7,000",
+                category: "kids",	
+                image: "images/product-86.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "31-36",
+                onDeal: true
+            },
+             {
+                 id: 143,
+                name: "Christmas pyjamas for both children and adult",
+                price: "9,000",
+                category: "unisex",	
+                image: "images/product-87.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "M-XXL",
+                onDeal: true
+            },
+             {
+                 id: 144,
+                name: "Jeans gown",
+                price: "9,500",
+                category: "kids",	
+                image: "images/product-88.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "3-8 yrs",
+                onDeal: true
+            },
+             {
+                 id: 145,
+                name: "Girl's top",
+                price: "6,000",
+                category: "kids",	
+                image: "images/product-89.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "2-14 yrs",
+                onDeal: true
+            },
+             {
+                 id: 146,
+                name: "Patterned shirts",
+                price: "8,000",
+                category: "unisex",	
+                image: "images/product-90.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "6-16 yrs",
+                onDeal: true
+            },
+             {
+                 id: 147,
+                name: "Chinos",
+                price: "6,000",
+                category: "kids",	
+                image: "images/product-91.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "6 months-3 yrs",
+                onDeal: true
+            },
+             {
+                 id: 148,
+                name: "Stock pinafore",
+                price: "4,500",
+                category: "kids",	
+                image: "images/product-92.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "0-3 yrs",
+                onDeal: true
+            },
+             {
+                 id: 149,
+                name: "Hoodie for 0-1 yr",
+                price: "7,500",
+                category: "kids",	
+                image: "images/product-94.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+             {
+                 id: 150,
+                name: "",
+                price: "9,000",
+                category: "kids",	
+                image: "images/product-93.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "1&2 yrs",
+                onDeal: true
+            },
+             {
+                 id: 151,
+                name: "",
+                price: "9,000",
+                category: "kids",	
+                image: "images/product-95.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "1&2 yrs",
+                onDeal: true
+            },
+             {
+                 id: 152,
+                name: "Sleeveless Joggers",
+                price: "9,000",
+                category: "kids",	
+                image: "images/product-96.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "5&6 yrs",
+                onDeal: true
+            },
+             {
+                 id: 153,
+                name: "",
+                price: "8,000",
+                category: "kids",	
+                image: "images/product-97.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "4&5 yrs",
+                onDeal: true
+            },
+             {
+                 id: 154,
+                name: "",
+                price: "7,000",
+                category: "kids",	
+                image: "images/product-98.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "1&2 yrs",
+                onDeal: true
+            },
+             {
+                 id: 155,
+                name: "",
+                price: "5,500",
+                category: "kids",	
+                image: "images/product-99.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "5-7 yrs",
+                onDeal: true
+            },
+             {
+                 id: 156,
+                name: "Short gown",
+                price: "4,500",
+                category: "kids",	
+                image: "images/product-100.jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "4-12 yrs",
+                onDeal: true
+            },
+             {
+                 id: 157,
+                name: "",
+                price: "4,500",
+                category: "kids",	
+                image: "images/product-101 (4).jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "6-8 yrs",
+                onDeal: true
+            },
+             {
+                 id: 158,
+                name: "",
+                price: "11,500",
+                category: "kids",	
+                image: "images/product-101 (3).jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "3-4 yrs",
+                onDeal: true
+            },
+             {
+                 id: 159,
+                name: "",
+                price: "13,500",
+                category: "kids",	
+                image: "images/product-101 (5).jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "10-11 yrs",
+                onDeal: true
+            },
+             {
+                 id: 160,
+                name: "",
+                price: "6,000",
+                category: "kids",	
+                image: "images/product-101 (6).jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+             {
+                 id: 161,
+                name: "",
+                price: "2,000",
+                category: "kids",	
+                image: "images/product-101 (7).jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+             {
+                 id: 162,
+                name: "",
+                price: "15,000",
+                category: "womens",	
+                image: "images/product-101 (1).jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+             {
+                 id: 163,
+                name: "",
+                price: "8,000",
+                category: "womens",	
+                image: "images/product-101 (2).jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+             {
+                 id: 164,
+                name: "",
+                price: "3,000",
+                category: "kids",	
+                image: "images/product-101 (8).jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+             {
+                 id: 165,
+                name: "",
+                price: "6,000",
+                category: "kids",	
+                image: "images/product-101 (9).jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "6-36 months",
+                onDeal: true
+            },
+             {
+                 id: 166,
+                name: "",
+                price: "20,000",
+                category: "womens",	
+                image: "images/product-101 (10).jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+             {
+                 id: 167,
+                name: "",
+                price: "17,000",
+                category: "kids",	
+                image: "images/product-101 (11).jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+             {
+                 id: 168,
+                name: "",
+                price: "17,000",
+                category: "kids",	
+                image: "images/product-101 (12).jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+             {
+                 id: 169,
+                name: "",
+                price: "17,000",
+                category: "kids",	
+                image: "images/product-101 (13).jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+             {
+                 id: 170,
+                name: "",
+                price: "15,000",
+                category: "kids",	
+                image: "images/product-101 (14).jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+             {
+                 id: 171,
+                name: "",
+                price: "13,000",
+                category: "neatly used items",	
+                image: "images/product-101 (15).jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+             {
+                 id: 172,
+                name: "",
+                price: "13,500",
+                category: "neatly used items",	
+                image: "images/product-101 (16).jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+             {
+                 id: 173,
+                name: "",
+                price: "13,000",
+                category: "neatly used items",	
+                image: "images/product-101 (17).jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+             {
+                 id: 174,
+                name: "",
+                price: "7,500",
+                category: "neatly used items",	
+                image: "images/product-101 (18).jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+             {
+                 id: 175,
+                name: "",
+                price: "7,500",
+                category: "neatly used items",	
+                image: "images/product-101 (19).jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+             {
+                 id: 176,
+                name: "",
+                price: "10,000",
+                category: "neatly used items",	
+                image: "images/product-101 (20).jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+             {
+                 id: 177,
+                name: "",
+                price: "14,000",
+                category: "neatly used items",	
+                image: "images/product-101 (21).jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+             {
+                 id: 178,
+                name: "",
+                price: "15,000",
+                category: "neatly used items",	
+                image: "images/product-101 (22).jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+             {
+                 id: 179,
+                name: "",
+                price: "10,000",
+                category: "neatly used items",	
+                image: "images/product-101 (23).jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+             {
+                 id: 180,
+                name: "",
+                price: "14,000",
+                category: "neatly used items",	
+                image: "images/product-101 (24).jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+             {
+                 id: 181,
+                name: "",
+                price: "15,000",
+                category: "neatly used items",	
+                image: "images/product-101 (25).jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+             {
+                 id: 182,
+                name: "",
+                price: "14,000",
+                category: "neatly used items",	
+                image: "images/product-101 (26).jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+             {
+                 id: 183,
+                name: "",
+                price: "13,500",
+                category: "neatly used items",	
+                image: "images/product-101 (27).jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+             {
+                 id: 184,
+                name: "",
+                price: "14,000",
+                category: "neatly used items",	
+                image: "images/product-101 (28).jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+             {
+                 id: 185,
+                name: "",
+                price: "13,000",
+                category: "neatly used items",	
+                image: "images/product-101 (29).jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+             {
+                 id: 186,
+                name: "",
+                price: "13,000",
+                category: "neatly used items",	
+                image: "images/product-101 (30).jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+             {
+                 id: 187,
+                name: "",
+                price: "13,000",
+                category: "neatly used items",	
+                image: "images/product-101 (31).jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            },
+            {
+                 id: 189,
+                name: "",
+                price: "8,000",
+                category: "neatly used items",	
+                image: "images/product-101 (2).jpg", // ← REPLACE WITH YOUR IMAGE
+                badge: "SALE",
+                onDeal: true
+            }, 
+{
+    id: 191,
+    name: "",
+    price: "42,000",
+    category: "kids",
+    image: "images/product-102 (2).jpg",
+    badge: "SALE",
+    onDeal: true
+},
+{
+    id: 192,
+    name: "",
+    price: "19,000",
+    category: "kids",
+    image: "images/product-102 (3).jpg",
+    badge: "SALE",
+    onDeal: true
+},
+{
+    id: 193,
+    name: "",
+    price: "19,000",
+    category: "kids",
+    image: "images/product-102 (4).jpg",
+    badge: "SALE",
+    onDeal: true
+},
+{
+    id: 194,
+    name: "",
+    price: "24,000",
+    category: "kids",
+    image: "images/product-102 (5).jpg",
+    badge: "SALE",
+    onDeal: true
+},
+{
+    id: 195,
+    name: "",
+    price: "25,000",
+    category: "kids",
+    image: "images/product-102 (6).jpg",
+    badge: "SALE",
+    onDeal: true
+},
+{
+    id: 196,
+    name: "",
+    price: "23,000",
+    category: "kids",
+    image: "images/product-102 (7).jpg",
+    badge: "SALE",
+    onDeal: true
+},
+{
+    id: 197,
+    name: "",
+    price: "13,000",
+    category: "kids",
+    image: "images/product-102 (8).jpg",
+    badge: "SALE",
+    onDeal: true
+},
+{
+    id: 198,
+    name: "",
+    price: "15,000",
+    category: "kids",
+    image: "images/product-102 (9).jpg",
+    badge: "SALE",
+    onDeal: true
+},
+{
+    id: 199,
+    name: "",
+    price: "17,000",
+    category: "kids",
+    image: "images/product-102 (10).jpg",
+    badge: "SALE",
+    onDeal: true
+},
+{
+    id: 200,
+    name: "",
+    price: "15,000",
+    category: "kids",
+    image: "images/product-102 (11).jpg",
+    badge: "SALE",
+    onDeal: true
+},
+{
+    id: 201,
+    name: "",
+    price: "13,000",
+    category: "kids",
+    image: "images/product-102 (12).jpg",
+    badge: "SALE",
+    onDeal: true
+},
+{
+    id: 202,
+    name: "",
+    price: "12,000",
+    category: "kids",
+    image: "images/product-102 (13).jpg",
+    badge: "SALE",
+    onDeal: true
+},
+{
+    id: 203,
+    name: "",
+    price: "11,000",
+    category: "kids",
+    image: "images/product-102 (14).jpg",
+    badge: "SALE",
+    onDeal: true
+},
+{
+    id: 204,
+    name: "",
+    price: "13,000",
+    category: "kids",
+    image: "images/product-102 (15).jpg",
+    badge: "SALE",
+    onDeal: true
+},
+{
+    id: 205,
+    name: "",
+    price: "9,500",
+    category: "kids",
+    image: "images/product-102 (16).jpg",
+    badge: "SALE",
+    onDeal: true
+},
+{
+    id: 206,
+    name: "",
+    price: "13,000",
+    category: "kids",
+    image: "images/product-102 (17).jpg",
+    badge: "SALE",
+    onDeal: true
+},
+{
+    id: 207,
+    name: "",
+    price: "15,000",
+    category: "kids",
+    image: "images/product-102 (18).jpg",
+    badge: "SALE",
+    onDeal: true
+},
+{
+    id: 208,
+    name: "",
+    price: "11,000",
+    category: "kids",
+    image: "images/product-102 (19).jpg",
+    badge: "SALE",
+    onDeal: true
+}
         ];
 
-        let cart = [];
-        let currentCategory = 'all';
+        // Store products in localStorage for account.html to access
+        localStorage.setItem('themmyteeProducts', JSON.stringify(products));
 
-        //   UPDATED DISPLAY FUNCTION - Without urgency/social proof elements
+        // Display products function
         function displayProducts(filteredProducts = products) {
             const grid = document.getElementById('productsGrid');
             grid.innerHTML = '';
 
             filteredProducts.forEach(product => {
-                const colorOptions = product.colors ? product.colors.map((color, index) => 
-                    `<span class="color-swatch ${index === 0 ? 'active' : ''}" style="background: ${color};" data-color="${color}"></span>`
-                ).join('') : '';
-
                 const productCard = `
                     <div class="product-card" data-category="${product.category}">
                         ${product.badge ? `<div class="product-badge">${product.badge}</div>` : ''}
                         <button class="quick-view-btn" onclick="quickView(${product.id})">
-                             Quick View
+                            <i class="fas fa-eye"></i>
+                        </button>
+                        <button class="wishlist-btn" onclick="toggleWishlist(${product.id})" id="wishlist-${product.id}">
+                            <i class="far fa-heart"></i>
                         </button>
                         <div class="product-image">
                             <img src="${product.image}" alt="${product.name}" 
@@ -2506,31 +3908,22 @@
                         </div>
                         <div class="product-info">
                             <div class="product-title">${product.name}</div>
-                            
-                            ${colorOptions ? `<div class="color-options">${colorOptions}</div>` : ''}
-                            
-                            <div class="product-price">
-                                ₦${product.price.toLocaleString()}
-                                ${product.oldPrice ? `<span class="old-price">₦${product.oldPrice.toLocaleString()}</span>` : ''}
-                            </div>
-                            
-                            
-                            <button class="add-to-cart" onclick="addToCart(${product.id})">
-                                <i class="fas fa-shopping-bag"></i> ADD TO BAG
-                            </button>
+                           <div class="product-price">
+    &#8358;${typeof product.price === 'number' ? product.price.toLocaleString() : product.price}
+    ${product.oldPrice ? `<span class="old-price">&#8358;${typeof product.oldPrice === 'number' ? product.oldPrice.toLocaleString() : product.oldPrice}</span>` : ''}
+</div>
+
+                            <button class="add-to-cart" onclick="addToCart(${product.id}); closeQuickView();" style="width: 100%; padding: 15px;">
+    <i class="fas fa-shopping-bag"></i> ADD TO BAG - &#8358;${typeof product.price === 'number' ? product.price.toLocaleString() : product.price}
+</button>
+
                         </div>
                     </div>
                 `;
                 grid.innerHTML += productCard;
             });
 
-            // Add event listeners to color swatches
-            document.querySelectorAll('.color-swatch').forEach(swatch => {
-                swatch.addEventListener('click', function() {
-                    this.parentElement.querySelectorAll('.color-swatch').forEach(s => s.classList.remove('active'));
-                    this.classList.add('active');
-                });
-            });
+            setTimeout(updateWishlistButtons, 100);
         }
 
         // Quick View Function
@@ -2538,10 +3931,6 @@
             const product = products.find(p => p.id === productId);
             const modal = document.getElementById('quickViewModal');
             const content = document.getElementById('quickViewContent');
-            
-            const colorOptions = product.colors ? product.colors.map((color, index) => 
-                `<span class="color-swatch ${index === 0 ? 'active' : ''}" style="background: ${color};" data-color="${color}"></span>`
-            ).join('') : '';
 
             content.innerHTML = `
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: start;">
@@ -2550,23 +3939,14 @@
                     </div>
                     <div>
                         <h2 style="color: var(--primary); margin-bottom: 15px;">${product.name}</h2>
-                        <div class="product-price" style="font-size: 1.8rem; margin-bottom: 15px;">
-                            ₦${product.price.toLocaleString()}
-                            ${product.oldPrice ? `<span class="old-price">₦${product.oldPrice.toLocaleString()}</span>` : ''}
-                        </div>
-                        
-                        ${product.colors ? `
-                        <div style="margin-bottom: 20px;">
-                            <strong>Colors:</strong>
-                            <div class="color-options" style="margin-top: 10px;">${colorOptions}</div>
-                        </div>
-                        ` : ''}
-                        
-                        
+                       <div class="product-price" style="font-size: 1.8rem; margin-bottom: 15px;">
+    &#8358;${typeof product.price === 'number' ? product.price.toLocaleString() : product.price}
+    ${product.oldPrice ? `<span class="old-price">&#8358;${typeof product.oldPrice === 'number' ? product.oldPrice.toLocaleString() : product.oldPrice}</span>` : ''}
+</div>
+
                         <p style="margin-bottom: 20px; line-height: 1.6;">Premium quality product with excellent craftsmanship. Perfect for everyday use and special occasions.</p>
-                        
                         <button class="add-to-cart" onclick="addToCart(${product.id}); closeQuickView();" style="width: 100%; padding: 15px;">
-                            <i class="fas fa-shopping-bag"></i> ADD TO BAG - ₦${product.price.toLocaleString()}
+                            <i class="fas fa-shopping-bag"></i> ADD TO BAG - ?${product.price.toLocaleString()}
                         </button>
                     </div>
                 </div>
@@ -2579,9 +3959,6 @@
             document.getElementById('quickViewModal').style.display = 'none';
         }
 
-        // Size Guide Functions
-
-
         // Search Products
         function searchProducts() {
             const searchTerm = document.getElementById('searchInput').value.toLowerCase();
@@ -2592,7 +3969,14 @@
             displayProducts(filtered);
         }
 
-        // Add to Cart
+        // Sync cart from localStorage
+        function syncCartFromStorage() {
+            const storedCart = JSON.parse(localStorage.getItem('themmyteeCart')) || [];
+            cart = storedCart;
+            updateCartDisplay();
+        }
+
+        // Add to Cart - UPDATED
         function addToCart(productId) {
             const product = products.find(p => p.id === productId);
             
@@ -2612,26 +3996,8 @@
             
             updateCartDisplay();
             
-            // Show success message with emoji
-            const notification = document.createElement('div');
-            notification.style.cssText = `
-                position: fixed;
-                top: 100px;
-                right: 20px;
-                background: var(--primary);
-                color: var(--secondary);
-                padding: 15px 20px;
-                border-radius: 10px;
-                box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-                z-index: 3000;
-                animation: slideIn 0.3s ease-out;
-            `;
-            notification.innerHTML = ` ${product.name} added to bag!`;
-            document.body.appendChild(notification);
-            
-            setTimeout(() => {
-                notification.remove();
-            }, 3000);
+            // Show success message
+            showNotification(` ${product.name} added to bag!`);
         }
 
         // Remove from Cart
@@ -2640,8 +4006,11 @@
             updateCartDisplay();
         }
 
-        // Update Cart Display
+        // Update cart display and sync with localStorage
         function updateCartDisplay() {
+            // Save cart to localStorage
+            localStorage.setItem('themmyteeCart', JSON.stringify(cart));
+            
             document.getElementById('cartCount').textContent = cart.reduce((total, item) => total + item.quantity, 0);
             
             const cartItems = document.getElementById('cartItems');
@@ -2665,7 +4034,7 @@
                         </div>
                         <div class="cart-item-details">
                             <div class="product-title">${item.name}</div>
-                            <div class="cart-item-price">₦${item.price.toLocaleString()} x ${item.quantity}</div>
+                           <div class="cart-item-price">&#8358;${item.price.toLocaleString()} x ${item.quantity}</div>
                         </div>
                         <button class="remove-item" onclick="removeFromCart(${item.id})">
                             <i class="fas fa-trash"></i>
@@ -2677,7 +4046,7 @@
             cartTotal.textContent = total.toLocaleString();
         }
 
-        // Proceed to Checkout - WhatsApp Integration
+        // Enhanced Proceed to Checkout - WhatsApp Integration
         function proceedToCheckout() {
             if (cart.length === 0) {
                 alert(" Your bag is empty! Add some products first.");
@@ -2691,15 +4060,27 @@
             cart.forEach(item => {
                 const itemTotal = item.price * item.quantity;
                 total += itemTotal;
-                message += `  ${item.name} - ${item.quantity} x ₦${item.price.toLocaleString()} =  ${itemTotal.toLocaleString()}\n`;
+                message += `  ${item.name} - ${item.quantity} x ?${item.price.toLocaleString()} =  ${itemTotal.toLocaleString()}\n`;
             });
             
-            message += `\n*TOTAL: ₦${total.toLocaleString()}*\n\n`;
-            message += " *Customer Details:*\n";
-            message += "Please provide your:\n";
-            message += "  Full Name\n";
-            message += "  Delivery Address in Lagos\n";
-            message += "  Phone Number\n\n";
+            message += `\n*TOTAL: ?${total.toLocaleString()}*\n\n`;
+            
+            if (currentUser) {
+                message += " *Customer Details:*\n";
+                message += `Name: ${currentUser.fullName}\n`;
+                message += `Email: ${currentUser.email}\n`;
+                message += `Phone: ${currentUser.phone}\n`;
+                message += `Address: ${currentUser.address}\n\n`;
+                message += "*(Registered Customer)* \n\n";
+            } else {
+                message += " *Customer Details:*\n";
+                message += "Please provide your:\n";
+                message += "  Full Name\n";
+                message += "  Delivery Address in Lagos\n";
+                message += "  Phone Number\n\n";
+                message += "*(Guest Checkout)* \n\n";
+            }
+            
             message += "Thank you for shopping with Themmytee Wears & Wares!  ";
 
             const encodedMessage = encodeURIComponent(message);
@@ -2707,6 +4088,9 @@
             
             window.open(whatsappURL, '_blank');
             closeCart();
+            
+            cart = [];
+            updateCartDisplay();
         }
 
         // Share Functions
@@ -2755,35 +4139,48 @@
             document.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
         }
 
+        // Notification system
+        function showNotification(message) {
+            const notification = document.createElement('div');
+            notification.style.cssText = `
+                position: fixed;
+                top: 100px;
+                right: 20px;
+                background: var(--primary);
+                color: var(--secondary);
+                padding: 15px 20px;
+                border-radius: 10px;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+                z-index: 3000;
+                animation: slideIn 0.3s ease-out;
+                max-width: 300px;
+            `;
+            notification.innerHTML = message;
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.style.animation = 'slideOut 0.3s ease-in';
+                setTimeout(() => notification.remove(), 300);
+            }, 3000);
+        }
+
         // Initialize
         displayProducts();
 
         // Close modals when clicking outside
         window.onclick = function(event) {
-            const cartModal = document.getElementById('cartModal');
-            const quickViewModal = document.getElementById('quickViewModal');
-            const sizeGuideModal = document.getElementById('sizeGuideModal');
-            
-            if (event.target === cartModal) {
-                closeCart();
-            }
-            if (event.target === quickViewModal) {
-                closeQuickView();
-            }
-            if (event.target === sizeGuideModal) {
-                closeSizeGuide();
-            }
+            const modals = ['cartModal', 'quickViewModal', 'accountModal', 'loginModal', 'forgotPasswordModal'];
+            modals.forEach(modalId => {
+                const modal = document.getElementById(modalId);
+                if (event.target === modal) {
+                    if (modalId === 'accountModal') closeAccountModal();
+                    if (modalId === 'loginModal') closeLoginModal();
+                    if (modalId === 'forgotPasswordModal') closeForgotPasswordModal();
+                    if (modalId === 'cartModal') closeCart();
+                    if (modalId === 'quickViewModal') closeQuickView();
+                }
+            });
         }
-
-        // Add CSS animation for notifications
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes slideIn {
-                from { transform: translateX(100%); opacity: 0; }
-                to { transform: translateX(0); opacity: 1; }
-            }
-        `;
-        document.head.appendChild(style);
 
         // Smooth scrolling for quick links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -2797,6 +4194,31 @@
                     });
                 }
             });
+        });
+
+        // Listen for storage changes (when account.html updates the cart)
+        window.addEventListener('storage', function(e) {
+            if (e.key === 'themmyteeCart') {
+                syncCartFromStorage();
+            }
+        });
+
+        // Detect when page becomes visible (user returns from account.html)
+        document.addEventListener('visibilitychange', function() {
+            if (!document.hidden) {
+                syncCartFromStorage();
+            }
+        });
+
+        // Also refresh cart when page gains focus
+        window.addEventListener('focus', function() {
+            syncCartFromStorage();
+        });
+
+        // Initialize cart from localStorage when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            syncCartFromStorage();
+            initUserState();
         });
     </script>
 </body>
