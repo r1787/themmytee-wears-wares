@@ -90,6 +90,13 @@
         }
 
         .header-main {
+            /* Header hide/show animation */
+.header-main {
+    transition: transform 0.35s ease;
+}
+.header-hidden {
+    transform: translateY(-100%);
+}
             background: var(--secondary);
             box-shadow: 0 5px 15px rgba(139, 69, 19, 0.1);
             position: sticky;
@@ -4251,5 +4258,21 @@ footer {
             initUserState();
         });
     </script>
+    let lastScrollTop = 0;
+const header = document.querySelector('.header-main');
+
+window.addEventListener('scroll', function () {
+    const currentScroll = window.pageYOffset;
+
+    if (currentScroll > lastScrollTop) {
+        // Scrolling DOWN → Hide header
+        header.classList.add('header-hidden');
+    } else {
+        // Scrolling UP → Show header
+        header.classList.remove('header-hidden');
+    }
+
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+});
 </body>
 </html>
