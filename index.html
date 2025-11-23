@@ -1353,6 +1353,32 @@ footer {
     height: 140px;
 }
 
+/* FIX: Smaller product images */
+@media (max-width: 480px) {
+    .product-image {
+        height: 150px !important;
+    }
+}
+
+/* FIX: Smaller Mobile Header */
+.header-main .container {
+    padding: 10px 0;
+}
+
+.logo img {
+    height: 55px !important;
+}
+
+.search-bar input {
+    padding: 10px 12px;
+    font-size: 0.8rem;
+}
+
+.header-actions a {
+    padding: 8px 12px !important;
+    font-size: 0.75rem !important;
+}
+
 .add-to-cart {
     padding: 10px;
     font-size: 0.8rem;
@@ -1363,10 +1389,14 @@ footer {
     font-size: 0.75rem;
 }
 
-            .products-grid {
-                grid-template-columns: 1fr;
-            }
-            
+            /* FIX: 2-column product grid on mobile */
+@media (max-width: 480px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px;
+    }
+}
+
             .account-highlight .account-text,
             .cart-highlight .cart-text {
                 display: none;
