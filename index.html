@@ -123,27 +123,7 @@
             object-fit: contain;
             filter: brightness(0.9);
         }
-        Increase mobile logo size with CSS
-Copilot Chat
-Increase mobile logo size with CSS
-index.html
-You said: I want the logo to be bigger
-I want the logo to be bigger on mobile phone 
-Copilot said: ``css name=mobile-logo-fix.css /* Add this CSS into your
-``css name=mobile-logo-fix.css /* Add this CSS into your existing <style> block (near the end) or as a separate stylesheet. It overrides the .logo min-width and increases the logo image size on small screens. */
-
-@media (max-width: 768px) { /* Allow the logo to shrink/expand and remove the large min-width that prevents it scaling */ .logo { min-width: 0 !important; margin-right: 12px; display: flex; align-items: center; }
-
-/* Make the logo image bigger on phones while keeping aspect ratio / .logo img { height: 160px; / increase this value to make it even bigger */ max-width: 100%; width: auto; object-fit: contain; }
-
-/* Make header layout wrap so the enlarged logo doesn't break layout */ .header-main .container { flex-wrap: wrap; gap: 8px; align-items: center; }
-
-/* Push the search-bar onto a new line and let it use available width */ .search-bar { order: 3; width: 100%; max-width: none; margin-top: 8px; }
-
-/* Keep the action buttons visible and compact */ .header-actions { order: 2; width: auto; } }
-
-/* Optional: extra adjustment for very small phones / @media (max-width: 420px) { .logo img { height: 140px; / slightly smaller on very small screens */ } }
-
+        
         .search-bar {
             flex: 1;
             display: flex;
